@@ -1,3 +1,5 @@
+# Git Notes
+
 * git push origin master
 * git config --global user.name "name"
 * git config --global user.email "email"
