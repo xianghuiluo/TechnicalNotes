@@ -1,4 +1,4 @@
-# Other random notes
+# Other Notes
 
 * 
 ```python
