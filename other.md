@@ -33,6 +33,7 @@ labelme image.jpg --nodata
 
 * 
 > stdbuf -o 0 [command] | tee log.txt
+
 > stdbuf -o 0 [command] >  >(tee -a log.txt) 2>  >(tee -a log.txt >& 2)
 
 * 
@@ -61,19 +62,30 @@ sudo cp libgtest* /usr/lib/
 
 * Python pkgs
 > sudo apt install python3-all-dev
+
 > sudo apt install python3-pip
+
 > pip3 install numpy
+
 > pip3 install scipy
+
 > pip3 install matplotlib
+
 > pip3 install scikit-learn
+
 > pip3 install scikit-image
+
 > pip3 install virtualenv virtualenvwrapper
+
 > pip3 install jupyter
+
 > pip3 install testresources
+
 > To fix pip: sudo python3 -m pip uninstall pip
 
 * Install TensorFlow
 > python3 -m pip install -U pip
+
 > python3 -m pip install -U tensorflow
 
 * OpenCV mat to and from csv files
