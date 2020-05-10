@@ -31,7 +31,7 @@ Also create a C++ program "myprogram.cpp" with the following content:
 ```C++
 #include <iostream>
 
-int main (int argc, char** argv)
+int main(int argc, char* argv[])
 {
     std::cout << "Version Number: "
               << VERSION_MAJOR << "." 
