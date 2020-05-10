@@ -43,11 +43,13 @@ In a terminal, go to the folder and launch the following commands to see the res
 git init
 git add CMakeLists.txt myprogram.cpp
 git commit -m "first commit"
+git log # check the commit number
 mkdir build
 cd build
 cmake ..
 make
 ./myprogram
 ```
+
 
 [Back to Contents](./README.md)
