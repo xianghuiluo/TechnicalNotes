@@ -35,8 +35,8 @@ int main(int argc, char* argv[])
 {
     std::cout << "Version Number: "
               << VERSION_MAJOR << "." 
-              << VERSION_MINOR << "." << std::hex
-              << VERSION_BUILD << std::endl;
+              << VERSION_MINOR << "." << 
+     std::hex << VERSION_BUILD << std::endl;
 }
 ```
 In a terminal, go to the folder and launch the following commands to see the results:
