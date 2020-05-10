@@ -4,7 +4,7 @@ This note will go through an example of using version numbers in C++ programs wi
 
 ```cmake
 cmake_minimum_required(VERSION 3.5)
-project(project-name VERSION 4.0)
+project(project-name VERSION 1.0)
 
 ## Compile as C++11
 set (CMAKE_CXX_STANDARD 11)
