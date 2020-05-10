@@ -10,6 +10,7 @@ project(project-name VERSION 4.0)
 set (CMAKE_CXX_STANDARD 11)
 set (CMAKE_CXX_STANDARD_REQUIRED YES)
 
+## Get the commit number and put it in REVISION_NUMBER
 execute_process(
   COMMAND git rev-parse --short HEAD
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
@@ -17,6 +18,7 @@ execute_process(
   OUTPUT_STRIP_TRAILING_WHITESPACE
 )
 
+## Define three macros: VERSION_MAJOR, VERSION_MINOR, VERSION_BUILD
 add_definitions("-DVERSION_MAJOR=${project-name_VERSION_MAJOR}")
 add_definitions("-DVERSION_MINOR=${project-name_VERSION_MINOR}")
 add_definitions("-DVERSION_BUILD=0x${REVISION_NUMBER}")
