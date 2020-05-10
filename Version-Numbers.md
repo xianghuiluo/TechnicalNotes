@@ -28,7 +28,7 @@ add_definitions("-DVERSION_BUILD=0x${REVISION_NUMBER}")
 add_executable (myprogram myprogram.cpp)
 ```
 Also create a C++ program "myprogram.cpp" with the following content:
-```
+```C++
 #include <iostream>
 
 int main (int argc, char** argv)
