@@ -1,5 +1,7 @@
 # Version Number with CMake
 
+This note will go through an example of using version numbers in C++ programs with CMake.
+
 ```cmake
 cmake_minimum_required(VERSION 3.5)
 project(project-name VERSION 4.0)
