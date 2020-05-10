@@ -1,6 +1,6 @@
 # Version Number with CMake
 
-```bash
+```cmake
 cmake_minimum_required(VERSION 3.5)
 project(project-name VERSION 4.0)
 
