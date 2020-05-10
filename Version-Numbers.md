@@ -38,5 +38,16 @@ int main (int argc, char** argv)
                         << std::hex << VERSION_BUILD << std::endl;
 }
 ```
+In a terminal, go to the folder and launch the following commands to see the results:
+```shell
+git init
+git add CMakeLists.txt myprogram.cpp
+git commit -m "first commit"
+mkdir build
+cd build
+cmake ..
+make
+./myprogram
+```
 
 [Back to Contents](./README.md)
