@@ -24,6 +24,7 @@ add_definitions("-DVERSION_MAJOR=${project-name_VERSION_MAJOR}")
 add_definitions("-DVERSION_MINOR=${project-name_VERSION_MINOR}")
 add_definitions("-DVERSION_BUILD=0x${REVISION_NUMBER}")
 
+## Create an executable
 add_executable (myprogram myprogram.cpp)
 ```
 Also create a C++ program "myprogram.cpp" with the following content:
