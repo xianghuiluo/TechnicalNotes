@@ -33,9 +33,10 @@ Also create a C++ program "myprogram.cpp" with the following content:
 
 int main (int argc, char** argv)
 {
-    std::cout << "Version Number: " << VERSION_MAJOR << "." 
-                                    << VERSION_MINOR << "." 
-                        << std::hex << VERSION_BUILD << std::endl;
+    std::cout << "Version Number: "
+              << VERSION_MAJOR << "." 
+              << VERSION_MINOR << "." << std::hex
+              << VERSION_BUILD << std::endl;
 }
 ```
 In a terminal, go to the folder and launch the following commands to see the results:
@@ -48,7 +49,7 @@ mkdir build
 cd build
 cmake ..
 make
-./myprogram
+./myprogram # check the output of the program
 ```
 
 
