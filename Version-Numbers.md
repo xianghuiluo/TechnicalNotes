@@ -1,7 +1,8 @@
 # Version Number with CMake
 
-This note will go through an example of using version numbers in C++ programs with CMake.
+This note will go through a minimal example of using version numbers in C++ programs with CMake.
 
+Create a folder "myproject" and create in the folder a file "CMakeLists.txt" with the following content:
 ```cmake
 cmake_minimum_required(VERSION 3.5)
 project(project-name VERSION 1.0)
@@ -22,6 +23,19 @@ execute_process(
 add_definitions("-DVERSION_MAJOR=${project-name_VERSION_MAJOR}")
 add_definitions("-DVERSION_MINOR=${project-name_VERSION_MINOR}")
 add_definitions("-DVERSION_BUILD=0x${REVISION_NUMBER}")
+
+add_executable (myprogram myprogram.cpp)
+```
+Also create a C++ program "myprogram.cpp" with the following content:
+```
+#include <iostream>
+
+int main (int argc, char** argv)
+{
+    std::cout << "Version Number: " << VERSION_MAJOR << "." 
+                                    << VERSION_MINOR << "." 
+                        << std::hex << VERSION_BUILD << std::endl;
+}
 ```
 
 [Back to Contents](./README.md)
