@@ -14,9 +14,9 @@
 
 > catkin_make install
 
-* sudo  apt  install  ros-<distro>-can
-* sudo  apt  install  ros-<distro>-can-msgs
-* sudo  apt  install  ros-<distro>-canopen-master
+* sudo  apt  install  ros-distro-can
+* sudo  apt  install  ros-distro-can-msgs
+* sudo  apt  install  ros-distro-canopen-master
 
 * rostopic
 > rostopic  echo  /pointcloud/width
