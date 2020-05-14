@@ -22,12 +22,12 @@
 
 > git checkout r1.0
 
-* Add SSH key to GitLab, Bitbucket
+* Add SSH key to GitHub
 > ssh-keygen -t rsa -C "email" -b 4096
 
 > xclip -sel clip < ~/.ssh/id_rsa.pub
 
-> paste to GitLab or Bitbucket
+> paste it in the SSH setting of GitHub
 
 * Remote
 > git remote -v
