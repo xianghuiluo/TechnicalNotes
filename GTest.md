@@ -27,8 +27,8 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 
-# Link runTests with what we want to test and the GTest and pthread library
 add_executable(runTests main.cpp sqrt_tests.cpp fabs_tests.cpp)
+# Link runTests with what we want to test and the GTest and pthread library
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 ```
 * main.cpp
