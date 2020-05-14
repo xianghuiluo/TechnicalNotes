@@ -8,6 +8,7 @@ $ sudo mkdir build
 $ cd build
 $ sudo cmake ..
 $ sudo make
+$ cd lib
 $ sudo cp libgtest* /usr/lib/
 ```
 Installation on other versions of Ubuntu are mostly the same.
