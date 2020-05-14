@@ -10,5 +10,6 @@ $ sudo cmake ..
 $ sudo make
 $ sudo cp libgtest* /usr/lib/
 ```
+Installation on other versions of Ubuntu are mostly the same.
 
 [Back to Contents](./README.md)
