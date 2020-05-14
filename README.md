@@ -1,7 +1,7 @@
 # Developer-Notes
 
-* [ROS](./ros-notes.md)
-* [Git](./git-notes.md)
-* [Other](./other.md)
-* [Version Number with CMake](./Version-Numbers.md)
-* [Unit Tests with Google Test](./GTest.md)
+* [ROS](./articles/ros-notes.md)
+* [Git](./articles/git-notes.md)
+* [Other](./articles/other.md)
+* [Version Number with CMake](./articles/Version-Numbers.md)
+* [Unit Tests with Google Test](./articles/GTest.md)
