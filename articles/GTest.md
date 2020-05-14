@@ -79,6 +79,6 @@ $ cmake ..
 $ make
 $ ./runTests
 ```
-For more information on GTest, here is a good [tutorial](../data/GTest-Framework.pdf)
+For more information on GTest, here is a good [tutorial](../data/GTest-Framework.pdf).
 
 [Back to Contents](../README.md)
