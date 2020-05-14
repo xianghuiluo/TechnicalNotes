@@ -21,6 +21,9 @@ Create a folder "myproject" and create in the folder the following three files:
 cmake_minimum_required(VERSION 3.0)
 project(GTestExample VERSION 1.0)
 
+## Compile as C++11
+set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD_REQUIRED YES)
 
 # Locate GTest
 find_package(GTest REQUIRED)
