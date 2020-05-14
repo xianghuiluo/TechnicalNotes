@@ -32,7 +32,44 @@ add_executable(runTests main.cpp sqrt_tests.cpp fabs_tests.cpp)
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 ```
 * main.cpp
+```C++
+#include "gtest/gtest.h"
+
+
+int main(int argc, char **argv)
+{
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+```
 * sqrt_tests.cpp
+```C++
+#include "gtest/gtest.h"
+#include <cmath>
+
+
+TEST(SquareRootTests, PositiveNos)
+{
+    ASSERT_EQ (std::sqrt (324.0), 18);
+    EXPECT_EQ (std::sqrt (625.0), 25);
+    ASSERT_NEAR (std::sqrt (2), 1.414, 0.001);
+}
+```
 * fabs_tests.cpp
+```C++
+#include "gtest/gtest.h"
+#include <cmath>
+
+
+TEST (FabsTests, Zero)
+{ 
+    ASSERT_EQ (fabs(0.0), 0.0);
+}
+
+TEST (FabsTests, Negative)
+{
+    ASSERT_EQ (fabs(-1), 1);
+}
+```
 
 [Back to Contents](./README.md)
