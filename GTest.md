@@ -71,5 +71,13 @@ TEST (FabsTests, Negative)
     ASSERT_EQ (fabs(-1), 1);
 }
 ```
+To build and run the tests, go to the folder in a terminal and launch the following commands:
+```bash
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+$ ./runTests
+```
 
 [Back to Contents](./README.md)
