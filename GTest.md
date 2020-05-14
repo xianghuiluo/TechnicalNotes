@@ -17,5 +17,8 @@ Installation on other versions of Ubuntu are mostly the same.
 ## Unit Test Example
 Create a folder "myproject" and create in the folder the following three files:
 * CMakeLists.txt
+* main.cpp
+* test1.cpp
+* test2.cpp
 
 [Back to Contents](./README.md)
