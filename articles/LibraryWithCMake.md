@@ -24,6 +24,9 @@ install(FILES ${headers}
   DESTINATION ${MY_INCLUDE_DESTINATION}/${PROJECT_NAME}
 )
 ```
+After building the library, the library can be installed by
+
+sudo make install
 
 ## Using a Library
 
