@@ -2,9 +2,9 @@
 
 * CMakeLists.txt
 ```cmake
-set(MY_INCLUDE_DESTINATION ~/MyLibrary/include)
-set(MY_LIB_DESTINATION ~/MyLibrary/lib)
-set(MY_BIN_DESTINATION ~/MyLibrary/bin)
+set(MY_INCLUDE_DESTINATION ~/MyLibraries/include)
+set(MY_LIB_DESTINATION ~/MyLibraries/lib)
+set(MY_BIN_DESTINATION ~/MyLibraries/bin)
 .
 .
 .
