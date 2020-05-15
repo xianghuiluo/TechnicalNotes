@@ -27,6 +27,15 @@ install(FILES ${headers}
 
 ## Using a Library
 
+In the cmake script of the program using a library, it should using the library by
+```cmake
+set(MY_INCLUDE_DESTINATION ~/MyLibraries/include)
+set(MY_LIB_DESTINATION ~/MyLibraries/lib)
+
+include_directories(${MY_INCLUDE_DESTINATION})
+link_directories(${MY_LIB_DESTINATION})
+```
+
 
 ## More Advanced Techniques
 
