@@ -25,4 +25,11 @@ install(FILES ${headers}
 )
 ```
 
+## Using a Library
+
+
+## More Advanced Techniques
+
+If needed, we can introduce versioning and make a system wide installation and use find_package() instead of hard coding a directory. For details, see [https://foonathan.net/2016/03/cmake-install/](https://foonathan.net/2016/03/cmake-install/)
+
 [Back to Contents](../README.md)
