@@ -1,4 +1,4 @@
-# Library Building and Using with CMake
+# Library Building and Usage with CMake
 
 * CMakeLists.txt
 ```cmake
