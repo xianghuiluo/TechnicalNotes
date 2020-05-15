@@ -1,5 +1,6 @@
 # Library Building and Usage with CMake
 
+## Building and Installing a Library
 * CMakeLists.txt
 ```cmake
 set(MY_INCLUDE_DESTINATION ~/MyLibraries/include)
