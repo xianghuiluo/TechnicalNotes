@@ -86,6 +86,6 @@ For more information on GTest, here is a good [tutorial](../data/GTest-Framework
 
 ## Useful Tricks
 
-* ./UnitTests --gtest_filter=ImageUtilTests.*
+* Run selected tests: $ ./UnitTests --gtest_filter=ImageUtilTests.*
 
 [Back to Contents](../README.md)
