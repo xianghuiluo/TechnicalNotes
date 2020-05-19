@@ -7,7 +7,20 @@ project-folder/
     build/
     CMakeLists.txt
     main.cpp
-    
+
+* main.cpp
+```C++
+#include <iostream>
+
+
+int main(int argc, char* argv[])
+{
+    for (int i=0; i < 10; ++i)
+    {
+        std::cout << "i: " << i << std::endl;
+    }
+}
+```
 * CMakeLists.txt
 ```cmake
 cmake_minimum_required(VERSION 3.5)
