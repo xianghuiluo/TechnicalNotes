@@ -47,17 +47,16 @@ project(HelloWorld VERSION 1.0)
 set (CMAKE_CXX_STANDARD 11)
 set (CMAKE_CXX_STANDARD_REQUIRED YES)
 
+## Set library installation directories
 set (MY_INCLUDE_DESTINATION ~/MyLibraries/include)
 set (MY_LIB_DESTINATION ~/MyLibraries/lib)
 set (MY_BIN_DESTINATION ~/MyLibraries/bin)
-
 
 
 # Add all cpp files to source
 file(GLOB HelloWorldSrc "*.cpp") 	
 # Build the library
 add_library (HelloWorld ${HelloWorldSrc})
-
 
 
 # Install built library to destination
@@ -109,7 +108,7 @@ project(LibTester VERSION 1.0)
 set (CMAKE_CXX_STANDARD 11)
 set (CMAKE_CXX_STANDARD_REQUIRED YES)
 
-
+## Set library directories
 set (MY_INCLUDE_DESTINATION ~/MyLibraries/include)
 set (MY_LIB_DESTINATION ~/MyLibraries/lib)
 
