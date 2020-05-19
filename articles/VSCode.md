@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
 * CMakeLists.txt
 ```cmake
 cmake_minimum_required(VERSION 3.5)
-project(LibTester VERSION 1.0)
+project(myproject VERSION 1.0)
 
 ## Compile as C++11
 set (CMAKE_CXX_STANDARD 11)
