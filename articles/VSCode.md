@@ -39,19 +39,23 @@ add_executable (main main.cpp)
 ```json
 {
     "version": "2.0.0",
-    "tasks": [
+    "tasks":
+    [
         {
             "type": "shell",
             "label": "cmake",
             "command": "/usr/bin/cmake",
-            "args": [
+            "args": 
+	    [
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "..",
             ],
-            "options": {
+            "options": 
+	    {
                 "cwd": "${workspaceRoot}/build"
             },
-            "problemMatcher": [
+            "problemMatcher": 
+	    [
                 "$gcc"
             ],
             "group": "build"
@@ -61,10 +65,12 @@ add_executable (main main.cpp)
             "label": "make",
             "command": "/usr/bin/make",
             "args": [],
-            "options": {
+            "options": 
+	    {
                 "cwd": "${workspaceRoot}/build"
             },
-            "problemMatcher": [
+            "problemMatcher": 
+	    [
                 "$gcc"
             ],
             "group": "build"
@@ -76,7 +82,8 @@ add_executable (main main.cpp)
 ```json
 {
     "version": "0.2.0",
-    "configurations": [
+    "configurations": 
+    [
         {
             "name": "(gdb) Launch",
             "type": "cppdbg",
@@ -88,7 +95,8 @@ add_executable (main main.cpp)
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "setupCommands": [
+            "setupCommands": 
+	    [
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
