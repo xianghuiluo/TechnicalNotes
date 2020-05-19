@@ -3,6 +3,41 @@
 ## Building and Installing a Library
 
 Create a folder "library-project" and create in the folder the following three files:
+* HelloWorld.h
+```C++
+#pragma once
+
+#include <string>
+
+
+
+class Greeter
+{
+public:
+    Greeter(std::string name);
+    void greet();
+    
+private:
+    std::string m_Name;
+};
+```
+* HelloWorld.cpp
+```C++
+#include <iostream>
+#include "HelloWorld.h"
+
+
+
+Greeter::Greeter(std::string name)
+    : m_Name(name)
+{}
+
+
+void Greeter::greet()
+{
+    std::cout << "Greetings, " << m_Name << "!" << std::endl;
+}
+```
 * CMakeLists.txt
 ```cmake
 cmake_minimum_required(VERSION 3.5)
@@ -38,42 +73,6 @@ file(GLOB headers "*.h" "*.hpp")
 install(FILES ${headers}
   DESTINATION ${MY_INCLUDE_DESTINATION}/${PROJECT_NAME}
 )
-```
-* HelloWorld.h
-```C++
-#pragma once
-
-#include <string>
-
-
-
-class Greeter
-{
-public:
-    Greeter(std::string name);
-    void greet();
-    
-private:
-    std::string m_Name;
-};
-```
-* HelloWorld.cpp
-```C++
-#include <iostream>
-
-#include "HelloWorld.h"
-
-
-
-Greeter::Greeter(std::string name)
-    : m_Name(name)
-{}
-
-
-void Greeter::greet()
-{
-    std::cout << "Greetings, " << m_Name << "!" << std::endl;
-}
 ```
 
 To build and install the library, go to the folder and launch the following commands:
