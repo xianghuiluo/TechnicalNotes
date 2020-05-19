@@ -43,17 +43,6 @@ idx = s.find("substring");
 if (idx == std::string::npos) { ... }
 ```
 
-* GTest
-```bash
-sudo apt install libgtest-dev
-cd /usr/src/googletest/googletest
-sudo mkdir build
-cd build
-sudo cmake ..
-sudo make
-sudo cp libgtest* /usr/lib/
-```
-> ./UnitTests --gtest_filter=ImageUtilTest.*
 
 * Install shared library
 > ldconfig [path]
