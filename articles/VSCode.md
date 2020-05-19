@@ -116,6 +116,13 @@ The following file can be used to do debugging:
 ```
 
 ## Building
+First click on "Terminal"->"Run Build Task..."->"cmake"
+![Image](../data/vscode-cmake.png)
+Then click on "Terminal"->"Run Build Task..."->"make"
+![Image](../data/vscode-make.png)
 
 ## Debugging
+To debug the "main" program, set a break point on line 8 and then click on "Run"->"Start Debugging"
+![Image](../data/vscode-debug.png)
+
 [Back to Contents](../README.md)
