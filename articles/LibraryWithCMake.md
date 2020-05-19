@@ -27,7 +27,6 @@ private:
 #include "HelloWorld.h"
 
 
-
 Greeter::Greeter(std::string name)
     : m_Name(name)
 {}
@@ -82,6 +81,11 @@ $ cmake ..
 $ make
 $ sudo make install
 ```
+After the building and installing, you will find the directory "~/MyLibraries/". Below shows the contents of the directory.
+![Image](../data/LibDir.png)
+![Image](../data/LibDirInc.png)
+![Image](../data/LibDirLib.png)
+
 
 ## Using a Library
 
@@ -89,8 +93,6 @@ Create a folder "user-project" and create in the folder the following two files:
 * main.cpp
 ```C++
 #include "HelloWorld/HelloWorld.h"
-
-
 
 
 int main(int argc, char* argv[])
