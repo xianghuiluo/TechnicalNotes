@@ -86,15 +86,54 @@ $ sudo make install
 
 ## Using a Library
 
-In the cmake script of the program using a library, it should using the library by
+Create a folder "user-project" and create in the folder the following two files:
+* main.cpp
+```C++
+#include "HelloWorld/HelloWorld.h"
+
+
+
+
+int main(int argc, char* argv[])
+{
+    Greeter greeter("Xianghui");
+    greeter.greet();
+}
+```
+* CMakeLists.txt
 ```cmake
-set(MY_INCLUDE_DESTINATION ~/MyLibraries/include)
-set(MY_LIB_DESTINATION ~/MyLibraries/lib)
+cmake_minimum_required(VERSION 3.5)
+project(LibTester VERSION 1.0)
+
+## Compile as C++11
+set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD_REQUIRED YES)
+
+
+set (MY_INCLUDE_DESTINATION ~/MyLibraries/include)
+set (MY_LIB_DESTINATION ~/MyLibraries/lib)
 
 include_directories(${MY_INCLUDE_DESTINATION})
 link_directories(${MY_LIB_DESTINATION})
-```
 
+
+
+	
+# Build the executable
+add_executable (main main.cpp)
+
+# link to libHelloWorld
+target_link_libraries(main HelloWorld)
+```
+To build the project, go to the folder and launch the following commands
+```bash
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+# run the program
+$ ./main
+```
 
 ## More Advanced Techniques
 
