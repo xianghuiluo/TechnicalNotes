@@ -1,5 +1,6 @@
 # Debug C++ Programs with GDB in VS Code
 
+```
 project-folder/
     .vscode/
         tasks.json
@@ -7,7 +8,7 @@ project-folder/
     build/
     CMakeLists.txt
     main.cpp
-
+```
 * main.cpp
 ```C++
 #include <iostream>
