@@ -9,6 +9,7 @@ myproject/
     .vscode/
         tasks.json
         launch.json
+    build/
     CMakeLists.txt
     main.cpp
 ```
