@@ -1,3 +1,94 @@
 # Debug C++ Programs with GDB in VS Code
 
+project-folder/
+    .vscode/
+        tasks.json
+        launch.json
+    build/
+    CMakeLists.txt
+    main.cpp
+    
+* CMakeLists.txt
+```cmake
+cmake_minimum_required(VERSION 3.5)
+project(LibTester VERSION 1.0)
+
+## Compile as C++11
+set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD_REQUIRED YES)
+
+	
+# Build the executable
+add_executable (main main.cpp)
+```
+* tasks.json
+```json
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "cmake",
+            "command": "/usr/bin/cmake",
+            "args": [
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "..",
+            ],
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "make",
+            "command": "/usr/bin/make",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}
+```
+* launch.json
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/a.out", // need to specify the specific executable name
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
+```
+
 [Back to Contents](../README.md)
