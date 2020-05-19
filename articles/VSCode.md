@@ -45,23 +45,23 @@ The following file defines the building tasks.
 ```json
 {
     "version": "2.0.0",
-    "tasks":
+    "tasks": 
     [
         {
             "type": "shell",
             "label": "cmake",
-            "command": "/usr/bin/cmake",
+            "command": "cmake",
             "args": 
-	    [
+            [
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "..",
             ],
             "options": 
-	    {
+            {
                 "cwd": "${workspaceRoot}/build"
             },
             "problemMatcher": 
-	    [
+            [
                 "$gcc"
             ],
             "group": "build"
@@ -69,14 +69,14 @@ The following file defines the building tasks.
         {
             "type": "shell",
             "label": "make",
-            "command": "/usr/bin/make",
+            "command": "make",
             "args": [],
             "options": 
-	    {
+            {
                 "cwd": "${workspaceRoot}/build"
             },
             "problemMatcher": 
-	    [
+            [
                 "$gcc"
             ],
             "group": "build"
@@ -103,7 +103,7 @@ The following file can be used to do debugging:
             "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": 
-	    [
+            [
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
@@ -124,5 +124,6 @@ Then click on "Terminal"->"Run Build Task..."->"make"
 ## Debugging
 To debug the "main" program, set a break point on line 8 and then click on "Run"->"Start Debugging"
 ![Image](../data/vscode-debug.png)
+The above debugging window appears and show the variable values on the left.
 
 [Back to Contents](../README.md)
