@@ -76,9 +76,14 @@ void Greeter::greet()
 }
 ```
 
-After building the library, the library can be installed by
-
-sudo make install
+To build and install the library, go to the folder and launch the following commands:
+```bash
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+$ sudo make install
+```
 
 ## Using a Library
 
