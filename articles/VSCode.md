@@ -1,7 +1,7 @@
 # Debug C++ Programs with GDB in VS Code
 
 ```
-project-folder/
+myproject/
     .vscode/
         tasks.json
         launch.json
