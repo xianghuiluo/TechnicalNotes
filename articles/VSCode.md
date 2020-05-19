@@ -1,5 +1,9 @@
 # Debug C++ Programs with GDB in VS Code
 
+This note goes through a trivial example of debugging C++ programs in VS Code.
+
+## Files of the Project
+Suppose we have a trivial project like the following:
 ```
 myproject/
     .vscode/
@@ -8,7 +12,8 @@ myproject/
     CMakeLists.txt
     main.cpp
 ```
-* main.cpp
+It contains:
+* The source code file: main.cpp
 ```C++
 #include <iostream>
 
@@ -21,7 +26,7 @@ int main(int argc, char* argv[])
     }
 }
 ```
-* CMakeLists.txt
+* The CMake file: CMakeLists.txt
 ```cmake
 cmake_minimum_required(VERSION 3.5)
 project(myproject VERSION 1.0)
@@ -34,6 +39,7 @@ set (CMAKE_CXX_STANDARD_REQUIRED YES)
 # Build the executable
 add_executable (main main.cpp)
 ```
+The following file defines the building tasks.
 * tasks.json
 ```json
 {
@@ -77,6 +83,7 @@ add_executable (main main.cpp)
     ]
 }
 ```
+The following file can be used to do debugging:
 * launch.json
 ```json
 {
@@ -107,4 +114,7 @@ add_executable (main main.cpp)
 }
 ```
 
+## Building
+
+## Debugging
 [Back to Contents](../README.md)
