@@ -90,10 +90,6 @@ After the building and installing, you will find the directory "~/MyLibraries/".
     lib/
         libHelloWorld.a
 ```
-![Image](../data/LibDir.png)
-![Image](../data/LibDirInc.png)
-![Image](../data/LibDirLib.png)
-
 
 ## Using a Library
 
