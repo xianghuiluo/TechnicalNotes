@@ -82,6 +82,14 @@ $ make
 $ sudo make install
 ```
 After the building and installing, you will find the directory "~/MyLibraries/". Below shows the contents of the directory.
+```
+~/MyLibraries/
+    include/
+        HelloWorld/
+	    HelloWorld.h
+    lib/
+        libHelloWorld.a
+```
 ![Image](../data/LibDir.png)
 ![Image](../data/LibDirInc.png)
 ![Image](../data/LibDirLib.png)
