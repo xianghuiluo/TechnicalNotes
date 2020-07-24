@@ -27,6 +27,8 @@
 
 > rostopic pub /localisation geometry_msgs/PointStamped "{header: auto, point: {x: -43.49358494, y: 172.54433833, z: 300}}"
 
+> rostopic pub /STOP ohmio_msgs/BoolStamped "{stamp: now, data: 1}" -1
+
 * rviz -d ./ground-seg.rviz
 
 * ROS with Python3
