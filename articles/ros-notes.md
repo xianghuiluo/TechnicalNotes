@@ -34,4 +34,9 @@
 
 > sudo pip3 install rospkg catkin_pkg
 
+* Distributed ROS
+> /etc/hosts      192.168.1.100 master-hostname
+
+> ~/.bashrc       export ROS_MASTER_URI=http://master-hostname:11311/
+
 [Back to Contents](../README.md)
