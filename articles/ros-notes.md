@@ -41,4 +41,7 @@
 
 > .bashrc         "export ROS_MASTER_URI=http://master-hostname:11311/"
 
+* Diagnostics
+> rosrun diagnostic_analysis export_csv.py dump.bag -d my_dir
+
 [Back to Contents](../README.md)
