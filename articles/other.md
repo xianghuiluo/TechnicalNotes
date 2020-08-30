@@ -7,11 +7,9 @@
 
 > sudo apt install python3-pip
 
-> pip3 install numpy scipy matplotlib scikit-learn scikit-image
+> pip3 install numpy scipy matplotlib scikit-learn scikit-image jupyterlab
 
 > pip3 install virtualenv virtualenvwrapper
-
-> pip3 install jupyterlab
 
 > pip3 install testresources
 
