@@ -89,4 +89,9 @@ std::uniform_int_distribution<int> UniformIntDistribution(0,10);
 int random_number = UniformIntDistribution(RandomEngine);
 ```
 
+* C++ unix time
+```C++
+double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count()/1000.0;
+```
+
 [Back to Contents](../README.md)
