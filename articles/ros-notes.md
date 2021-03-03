@@ -13,6 +13,7 @@
 > catkin_make  --pkg  ohmio_msgs
 
 > catkin_make install
+
 > catkin_make -DCATKIN_WHITELIST_PACKAGES="package1;package2"
 
 * sudo  apt  install  ros-distro-can
