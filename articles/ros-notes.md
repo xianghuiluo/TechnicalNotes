@@ -46,4 +46,9 @@
 * Diagnostics
 > rosrun diagnostic_analysis export_csv.py dump.bag -d my_dir
 
+* PCL_ROS
+> rosrun pcl_ros pointcloud_to_pcd input:=/lidar_point_cloud _prefix:=lidar1-
+
+> rosrun pcl_ros pcd_to_pointcloud <.pcd> cloud_pcd:=/lidar_point_cloud _frame_id:=lidar
+
 [Back to Contents](../README.md)
