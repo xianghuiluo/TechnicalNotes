@@ -28,8 +28,8 @@
 > git remote add origin git@bitbucket.org::ohmio/ground-segmentation.git
 
 * Submodule
-> git submodule add git@bitbucket.org::ohmio/common_libraries.git folder-name\ 
-> git submodule update --init --recursive\ 
+> git submodule add git@bitbucket.org::ohmio/common_libraries.git folder-name\
+> git submodule update --init --recursive\
 > git submodule update --recursive --remote
 
 * Revert to a previous commit
