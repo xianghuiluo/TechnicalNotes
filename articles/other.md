@@ -3,16 +3,11 @@
 
 
 * Python pkgs
-> sudo apt install python3-all-dev
-
-> sudo apt install python3-pip
-
-> pip3 install numpy scipy matplotlib scikit-learn scikit-image jupyterlab
-
-> pip3 install virtualenv virtualenvwrapper
-
-> pip3 install testresources
-
+> sudo apt install python3-all-dev\
+> sudo apt install python3-pip\
+> pip3 install numpy scipy matplotlib scikit-learn scikit-image jupyterlab\
+> pip3 install virtualenv virtualenvwrapper\
+> pip3 install testresources\
 > To fix pip: sudo python3 -m pip uninstall pip
 
 
@@ -48,8 +43,7 @@ labelme image.jpg --nodata
 ```
 
 * 
-> stdbuf -o 0 [command] | tee log.txt
-
+> stdbuf -o 0 [command] | tee log.txt\
 > stdbuf -o 0 [command] >  >(tee -a log.txt) 2>  >(tee -a log.txt >& 2)
 
 * 
@@ -68,8 +62,7 @@ if (idx == std::string::npos) { ... }
 * ffmpeg -i a.mp4 -r 25 -vf scale=512:-1 -ss 00:00:00 -to 00:00:05 b.gif
 
 * Install TensorFlow
-> python3 -m pip install -U pip
-
+> python3 -m pip install -U pip\
 > python3 -m pip install -U tensorflow
 
 * OpenCV mat to and from csv files
