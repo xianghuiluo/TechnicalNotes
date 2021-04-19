@@ -33,7 +33,7 @@
 > git submodule update --recursive --remote
 
 * Revert to a previous commit
-> git revert --no-commit commit-id..HEAD\
+> git revert --no-commit "commit-id"..HEAD\
 > git commit
 
 [Back to Contents](../README.md)
