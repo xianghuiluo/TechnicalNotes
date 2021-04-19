@@ -57,9 +57,9 @@ if (idx == std::string::npos) { ... }
 * Install shared library
 > ldconfig [path]
 
-* ffmpeg -framerate 5 -pattern_type glob -i "obstacle*.png" -vcodec mpeg4 output.mp4
-
-* ffmpeg -i a.mp4 -r 25 -vf scale=512:-1 -ss 00:00:00 -to 00:00:05 b.gif
+* ffmpeg
+> ffmpeg -framerate 5 -pattern_type glob -i "obstacle*.png" -vcodec mpeg4 output.mp4\
+> ffmpeg -i a.mp4 -r 25 -vf scale=512:-1 -ss 00:00:00 -to 00:00:05 b.gif
 
 * Install TensorFlow
 > python3 -m pip install -U pip\
