@@ -89,4 +89,11 @@ int random_number = UniformIntDistribution(RandomEngine);
 double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count()/1000.0;
 ```
 
+* Mbps test
+> iperf -s\
+> iperf -c "IP" -t 60
+
+* Configure IP
+> sudo ifconfig enp0s 192.168.1.100
+
 [Back to Contents](../README.md)
