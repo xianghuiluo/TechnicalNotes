@@ -96,4 +96,8 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 * Configure IP
 > sudo ifconfig enp0s 192.168.1.100
 
+* Ubuntu Pkg management
+> sudo dpkg --list *imager*\
+> sudo apt remove rpi-imager
+
 [Back to Contents](../README.md)
