@@ -8,3 +8,4 @@
 * [Library Building and Usage with CMake](./articles/LibraryWithCMake.md)
 * [Debug C++ Programs with GDB in VS Code](./articles/VSCode.md)
 * [Nextcloud Server Setup](./articles/nextcloud.md)
+* [ubuntu20 on Raspberry Pi 4B](./articles/raspi-ubuntu.md)
