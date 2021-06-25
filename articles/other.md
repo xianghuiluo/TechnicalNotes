@@ -100,4 +100,8 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 > sudo dpkg --list \*imager\*\
 > sudo apt remove rpi-imager
 
+* cp with progress
+> rsync -r --progress src dest\
+> rsync -r --info=progress2 src dest
+
 [Back to Contents](../README.md)
