@@ -107,4 +107,8 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 * combine files
 > cat a.zip.* > a.zip
 
+* zip
+> zip zipname file1 file2 ... fileN
+> unzip zipname -d dir
+
 [Back to Contents](../README.md)
