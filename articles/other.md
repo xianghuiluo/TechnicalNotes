@@ -104,4 +104,7 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 > rsync -r --progress src dest\
 > rsync -r --info=progress2 src dest
 
+* combine files
+> cat a.zip.* > a.zip
+
 [Back to Contents](../README.md)
