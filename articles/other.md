@@ -108,7 +108,10 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 > cat a.zip.* > a.zip
 
 * zip
-> zip zipname file1 file2 ... fileN
+> zip zipname file1 file2 ... fileN\
 > unzip zipname -d dir
+
+* tcpdump
+> tcpdump src <IP> -w file.pcap
 
 [Back to Contents](../README.md)
