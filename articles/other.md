@@ -115,7 +115,7 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 > tcpdump src "IP" -w file.pcap
   
 * grep
-> grep pattern file
+> grep pattern file\
 > grep -lr pattern dir
 
 [Back to Contents](../README.md)
