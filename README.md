@@ -2,7 +2,7 @@
 
 * [ROS](./articles/ros-notes.md)
 * [Git](./articles/git-notes.md)
-* [Other](./articles/other.md)
+* [Misc](./articles/other.md)
 * [Version Number with CMake](./articles/Version-Numbers.md)
 * [Unit Tests with Google Test](./articles/GTest.md)
 * [Library Building and Usage with CMake](./articles/LibraryWithCMake.md)
