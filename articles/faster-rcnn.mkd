@@ -10,7 +10,7 @@
 - First 2D represent the box center coordinates
 - Last dimension represents the box type: **anchor boxes** (small, medium, large) × (wide, square, tall)
 
-## non-maximum suppresion
+### non-maximum suppresion
 There are many similar boxes and we don't want to report all of them.
 1. Build a sorted list of all windows with "objectness" score above a threshold.
 2. While there are windows in the list, choose the window with the highest score and discard from the list all other largely overlapping windows.
