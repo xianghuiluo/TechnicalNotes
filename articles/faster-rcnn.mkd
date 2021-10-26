@@ -1,10 +1,10 @@
 # Faster RCNN
 
-![Image](Faster-RCNN.png)
+![Image](../data/Faster-RCNN.png)
 
 ## Region Proposal Network (RPN)
 
 
 ## ROI pooling
 
-![Image](ROI-pool.gif)
+![Image](../data/ROI-pool.gif)
