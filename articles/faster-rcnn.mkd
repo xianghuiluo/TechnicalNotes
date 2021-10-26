@@ -11,6 +11,7 @@
 - Last dimension represents the box type: **anchor boxes** (small, medium, large) × (wide, square, tall)
 
 ## non-maximum suppresion
+There are many similar boxes and we don't want to report all of them.
 
 ## ROI pooling
 ROI's are of different shape and size. CNN prefers images of fixed size. **ROI pooling** extracts equal-length feature vectors from all ROI proposals.\
