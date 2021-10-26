@@ -3,7 +3,8 @@
 ![Image](../data/Faster-RCNN.png)
 
 ## Region Proposal Network (RPN)
-* Which window on the image should a CNN classifier look at?
+* Which window on the image should a CNN classifier look at?\
+**RPN** scores the "objectness" of windows and finds the ones with objects.
 
 ## ROI pooling
 ROI's are of different shape and size. CNN prefers images of fixed size. **ROI pooling** extracts equal-length feature vectors from all ROI proposals.\
