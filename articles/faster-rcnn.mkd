@@ -9,6 +9,9 @@
 - A 3D map encodes a large collection of bounding boxes
 - First 2D represent the box center coordinates
 - Last dimension represents the box type: **anchor boxes** (small, medium, large) × (wide, square, tall)
+sliding windows | anchor boxes
+---|---
+![Image](../data/sliding-window.png)|![Image](../data/anchor.jpeg)
 
 ### non-maximum suppresion
 There are many similar boxes and we don't want to report all of them.
