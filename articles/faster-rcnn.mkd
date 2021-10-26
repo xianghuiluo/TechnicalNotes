@@ -20,7 +20,7 @@ ROI's are of different shape and size. CNN prefers images of fixed size. **ROI p
 ![Image](../data/ROI-pool.gif)
 
 ## bounding box regression
-To report the precise location of objects, it is needed to 
+To report the precise location of objects, it is needed to refine the bbox if an object is found.
 
 ## Example
 ![Image](../data/example.png)
