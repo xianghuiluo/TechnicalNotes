@@ -6,5 +6,5 @@
 
 
 ## ROI pooling
-ROI's are of different shape and size. CNN prefers images of fixed size. **ROI pooling** extracts equal-length feature vectors from all ROI proposals.
+ROI's are of different shape and size. CNN prefers images of fixed size. **ROI pooling** extracts equal-length feature vectors from all ROI proposals.\
 ![Image](../data/ROI-pool.gif)
