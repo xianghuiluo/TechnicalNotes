@@ -6,6 +6,9 @@
 * Which window on the image should a CNN classifier look at?\
 
 **RPN** scores the "objectness" of windows and finds the ones with objects.
+- Encoding of a large collection of bounding boxes as a 3D map
+- First 2D represent the box center coordinates
+- Last dimension represents the box type: (small, medium, large) × (wide, square, tall)
 
 ## ROI pooling
 ROI's are of different shape and size. CNN prefers images of fixed size. **ROI pooling** extracts equal-length feature vectors from all ROI proposals.\
