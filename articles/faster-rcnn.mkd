@@ -4,6 +4,7 @@
 
 ## Region Proposal Network (RPN)
 * Which window on the image should a CNN classifier look at?\
+
 **RPN** scores the "objectness" of windows and finds the ones with objects.
 
 ## ROI pooling
