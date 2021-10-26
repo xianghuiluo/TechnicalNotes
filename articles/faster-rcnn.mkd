@@ -10,9 +10,13 @@
 - First 2D represent the box center coordinates
 - Last dimension represents the box type: **anchor boxes** (small, medium, large) × (wide, square, tall)
 
+## non-maximum suppresion
+
 ## ROI pooling
 ROI's are of different shape and size. CNN prefers images of fixed size. **ROI pooling** extracts equal-length feature vectors from all ROI proposals.\
 ![Image](../data/ROI-pool.gif)
+
+## bounding box regression
 
 ## Example
 ![Image](../data/example.png)
