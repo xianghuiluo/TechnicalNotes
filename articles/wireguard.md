@@ -84,5 +84,9 @@ Now create the client configuration file *wg0.conf* in the folder *~/.wireguard/
 [Interface]
 Address = 192.168.1.2/32
 ```
+We assigned the IP *192.168.1.2* to the client in the VPN. Add the client private key:
+```bash
+echo "PrivateKey = $(cat ~/.wireguard/client1/private.key)" >> ~/.wireguard/client1/wg0.conf
+```
 
 [Back to Contents](../README.md)
