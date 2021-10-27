@@ -29,6 +29,8 @@ umask 077
 wg genkey > private.key
 wg pubkey < private.key > public.key
 ```
+Now the files *private.key* and *public.key* in the */etc/wireguard/* folder contains the private key and the public key of the server respectively.
+
 ### Server Configuration File
 
 ## WireGuard Client
