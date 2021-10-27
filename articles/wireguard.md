@@ -19,9 +19,12 @@ The WireGuard tools need to be installed on both the server and the client devic
 sudo apt update && sudo apt install wireguard
 ```
 
-## Home router setup
-* to add
-* to add
-* to add
+## WireGuard Server
+### Key Generation
+### Server Configuration File
+
+## WireGuard Client
+### Key Generation
+### Client Configuration File
 
 [Back to Contents](../README.md)
