@@ -21,6 +21,14 @@ sudo apt update && sudo apt install wireguard
 
 ## WireGuard Server
 ### Key Generation
+The key for the server has to be generated before we can set up server configuration file. Use the following commands to generate the private and public keys:
+```bash
+sudo -i
+cd /etc/wireguard
+umask 077
+wg genkey > private.key
+wg pubkey < private.key > public.key
+```
 ### Server Configuration File
 
 ## WireGuard Client
