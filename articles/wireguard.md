@@ -45,9 +45,9 @@ ListenPort = 51820
 Here we give the server an IP of 192.168.1.1 in the VPN. The */24* is a CIDR mask and means that the server will relay other traffic in the 192.168.1.1-192.168.1.254 range to peers in the VPN. It also gives us the potential to have 253 clients. Note that you can choose any set of IP's in the private IP ranges (192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12).\
 Now we add the server private key to the file
 ```bash
-echo "PrivateKey = $(cat server.key)" >> /etc/wireguard/wg0.conf
+echo "PrivateKey = $(cat /etc/wireguard/private.key)" >> /etc/wireguard/wg0.conf
 ```
-At this point, our wg0.conf may look like this
+At this point, our *wg0.conf* may look like this
 ```
 [Interface]
 Address = 192.168.1.1/24
