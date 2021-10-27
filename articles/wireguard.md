@@ -13,9 +13,11 @@ Here we suppose the home network consists of a home router and several devices c
 Before we start setting up the WireGuard server and clients, port forwarding need to be set up on the home router so that a client device away from home can connect to the WireGuard server behind the home router. The default port for WireGuard is 51820/UDP. Here we need internet traffic to 101.92.31.37/51820 be directed to 192.168.0.254/51820. Below is an example of setting the port forwarding on a home router
 ![Image](../data/Port-Forward.png)
 
-## Client configuration
-* to add
-* to add
+## WireGuard Installation
+The WireGuard tools need to be installed on both the server and the client devices. For Ubuntu 20, it can be installed simply by the following commands
+```bash
+sudo apt update && sudo apt install wireguard
+```
 
 ## Home router setup
 * to add
