@@ -134,4 +134,31 @@ PublicKey = la8he+5YpXJRhJKYDLmrt8/vE4q0t06P5EfqUmgr31s=
 PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
 ```
 
+This finishes creating the configuration of a WireGuard client. Additional clients can be add by following the same steps and appending to the server configuration file.
+
+## Running the Server
+To bring up the serve, simply use the command:
+```bash
+sudo wg-quick up home-vpn
+```
+This creates a digital interface *home-vpn*.\
+To stop the serve, use
+```bash
+sudo wg-quick down home-vpn
+```
+To enable the service at system boot, use the command:
+```bash
+sudo systemctl enable wg-quick@home-vpn
+```
+The status of the WireGuard server can be shown by
+```bash
+sudo wg show
+```
+
+## Connecting to the Server
+
+## Accessing the Home Network
+
+## Accessing the Internet
+
 [Back to Contents](../README.md)
