@@ -88,5 +88,13 @@ We assigned the IP *192.168.1.2* to the client in the VPN. Add the client privat
 ```bash
 echo "PrivateKey = $(cat ~/.wireguard/client1/private.key)" >> ~/.wireguard/client1/wg0.conf
 ```
+Now add the server connect details:
+```bash
+echo "[Peer]" >> ~/.wireguard/client1/wg0.conf
+echo "Endpoint = 123.456.789.111:49312" >> ~/.wireguard/client1/wg0.conf
+echo "AllowedIPs = 192.168.1.0/24" >> ~/.wireguard/client1/wg0.conf
+echo "PublicKey = $(sudo cat /etc/wireguard/public.key)" >> ~/.wireguard/client1/wg0.conf
+echo "PresharedKey = $(cat ~/.wireguard/client1/psk)" >> ~/.wireguard/client1/wg0.conf
+```
 
 [Back to Contents](../README.md)
