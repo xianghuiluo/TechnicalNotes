@@ -70,6 +70,13 @@ umask 077
 mkdir .wireguard && cd .wireguard
 mkdir client1 && cd client1
 ```
+Generate the keys of the client with the following commands
+```bash
+wg genkey > private.key
+wg pubkey < private.key > public.key
+wg genpsk > psk
+```
+The new piece here is the **Pre-Shared Key (PSK)**. The PSK is optional, but adds significant security and is very easy to add.
 
 ### Client Configuration File
 
