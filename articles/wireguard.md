@@ -9,10 +9,8 @@ Here we suppose the home network consists of a home router and several devices c
 - The LAN IP range is 192.168.0.0/24
 - The WireGuard server is assigned a static LAN IP of 192.168.0.254 by the home router
 
-## Server configuration
-* to add
-* to add
-* to add
+## Port Forwarding
+![Image](../data/Port-Forward.png)
 
 ## Client configuration
 * to add
