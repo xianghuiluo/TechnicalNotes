@@ -36,12 +36,13 @@ Create the server configuration file *wg0.conf* in the folder */etc/wireguard/*
 ```bash
 touch /etc/wireguard/wg0.conf
 ```
-and add the following lines
+This file will be used to create the wg0 interface by WireGuard later. Add the following lines
 ```
 [Interface]
 Address = 192.168.1.1/24
 ListenPort = 51820
 ```
+Here we give the server an IP of 192.168.1.1 in the VPN. The */24* is a CIDR mask and means that the server will relay other traffic in the 192.168.1.1-192.168.1.254 range to peers in the VPN. It also gives us the potential to have 253 clients.
 
 ## WireGuard Client
 ### Key Generation
