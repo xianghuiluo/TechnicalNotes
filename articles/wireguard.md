@@ -79,5 +79,10 @@ wg genpsk > psk
 The new piece here is the **Pre-Shared Key (PSK)**. The PSK is optional, but adds significant security and is very easy to add.
 
 ### Client Configuration File
+Now create the client configuration file *wg0.conf* in the folder *~/.wireguard/client1/* and add the following two lines
+```
+[Interface]
+Address = 192.168.1.2/32
+```
 
 [Back to Contents](../README.md)
