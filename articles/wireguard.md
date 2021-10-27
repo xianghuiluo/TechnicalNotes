@@ -32,6 +32,16 @@ wg pubkey < private.key > public.key
 Now the files *private.key* and *public.key* in the */etc/wireguard/* folder contain the private key and the public key of the server respectively.
 
 ### Server Configuration File
+Create the server configuration file *wg0.conf* in the folder */etc/wireguard/*
+```bash
+touch /etc/wireguard/wg0.conf
+```
+and add the following lines
+```
+[Interface]
+Address = 192.168.1.1/24
+ListenPort = 51820
+```
 
 ## WireGuard Client
 ### Key Generation
