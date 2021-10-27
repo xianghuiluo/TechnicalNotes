@@ -61,8 +61,8 @@ PrivateKey = YIHEAqPWDJh2DsCrsDltwtRsBuxm7lEjwF8UOEcvxkM=
 For now let us log out of the root account by using **Ctrl+D**.
 
 ## WireGuard Client
+We will create the client keys and configuration file on the server. If the client is also a device running Ubuntu 20 or a similar Linux distribution, this can also be done on the client device.
 ### Key Generation
-If the client device is also running Ubuntu 20 or a similar Linux distribution, follow the same steps for generating the keys of the server above. Otherwise, we create the keys and the configuration file for the client device on the server.\
 First we create a folder for keeping the keys and the configuration file.
 ```bash
 cd ~
