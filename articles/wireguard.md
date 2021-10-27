@@ -51,7 +51,7 @@ Now we add the server private key to the file
 ```bash
 echo "PrivateKey = $(cat /etc/wireguard/private.key)" >> /etc/wireguard/home-vpn.conf
 ```
-At this point, our *home-vpn.conf* will like this
+At this point, our *home-vpn.conf* will like this (with different keys)
 ```
 [Interface]
 Address = 192.168.1.1/24
@@ -95,6 +95,43 @@ echo "Endpoint = 101.92.31.37:51820" >> ~/.wireguard/client1/home-vpn.conf
 echo "AllowedIPs = 192.168.1.0/24" >> ~/.wireguard/client1/home-vpn.conf
 echo "PublicKey = $(sudo cat /etc/wireguard/public.key)" >> ~/.wireguard/client1/home-vpn.conf
 echo "PresharedKey = $(cat ~/.wireguard/client1/psk)" >> ~/.wireguard/client1/home-vpn.conf
+```
+At this stage, the client configuration file *~/.wireguard/client1/home-vpn.conf* looks like below (with different keys):
+```
+[Interface]
+Address = 192.168.1.2/32
+PrivateKey = cD+NoV94mw7SnjOU1VTHdH6GACie8mr/VDPXXY3oI1E=
+
+[Peer]
+Endpoint = 101.92.31.37:51820
+AllowedIPs = 192.168.1.0/24
+PublicKey = U2oRFamuEDrOB8eds1ETQWE3nUh7VYoGvDZV0HU8lm0=
+PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
+```
+The *[Interface]* section specifies the IP of the client in the VPN and contains the private key of the client.\
+The client has one peer, which is the server, and the *[Peer]* section contains the connection details of the server. **Endpoint** is the public IP address and port number with which our client device can reach the server. **AllowedIPs** specifies the IP's the client can access through the server. *PublicKey* in the *[Peer]* section is the public key of the peer (the server here). Finally we have the **PresharedKey** for the connection between the client and the server.
+
+### Client in Server Configuration File
+For the client to connect, the server needs to know that the client is allowed to connect. We need to add the client as a *[Peer]* in the server configuration file:
+```bash
+sudo -i
+echo "[Peer]" >> /etc/wireguard/home-vpn.conf
+echo "AllowedIPs = 192.168.1.2/32" >> /etc/wireguard/home-vpn.conf
+echo "PublicKey = $(cat /home/user/.wireguard/client1/public.key)" >> /etc/wireguard/home-vpn.conf
+echo "PresharedKey = $(cat /home/user/.wireguard/client1/psk)" >> /etc/wireguard/home-vpn.conf
+```
+Make sure to change *user* to your user name so that the file path points to the correct file. Log out of the root account by **Ctrl+D** after this is done.\
+Now the server configuration file */etc/wireguard/home-vpn.conf* should look like (with different keys):
+```
+[Interface]
+Address = 192.168.1.1/24
+ListenPort = 51820
+PrivateKey = YIHEAqPWDJh2DsCrsDltwtRsBuxm7lEjwF8UOEcvxkM=
+
+[Peer]
+AllowedIPs = 192.168.1.2/32
+PublicKey = la8he+5YpXJRhJKYDLmrt8/vE4q0t06P5EfqUmgr31s=
+PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
 ```
 
 [Back to Contents](../README.md)
