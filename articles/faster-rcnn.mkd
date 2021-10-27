@@ -1,6 +1,5 @@
 # Faster RCNN
 
-![Image](../data/Faster-RCNN.png)
 ![Image](../data/faster-rcnn-architecture.jpeg)
 
 ## Region Proposal Network (RPN)
