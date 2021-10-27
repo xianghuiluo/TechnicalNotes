@@ -58,7 +58,7 @@ Address = 192.168.1.1/24
 ListenPort = 51820
 PrivateKey = YIHEAqPWDJh2DsCrsDltwtRsBuxm7lEjwF8UOEcvxkM=
 ```
-Use **Ctrl+D** to log out of the root account.
+For now let us log out of the root account by using **Ctrl+D**.
 
 ## WireGuard Client
 ### Key Generation
