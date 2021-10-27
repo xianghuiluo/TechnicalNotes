@@ -4,13 +4,13 @@ This note walks through the steps to set up a WireGuard server on a home compute
 
 ## Home Network Environment
 Here we suppose the home network consists of a home router and several devices connected to it. Let us assume the following:
-- The public IP of the router is *101.92.31.37*
+- The public IP of the router is **101.92.31.37**
 - The devices on the LAN of the router are assigned local IP's with DHCP
-- The LAN IP range is *192.168.0.0/24*
-- The WireGuard server is assigned a static LAN IP of *192.168.0.254* by the home router
+- The LAN IP range is **192.168.0.0/24**
+- The WireGuard server is assigned a static LAN IP of **192.168.0.254** by the home router
 
 ## Port Forwarding and Firewall
-Before we start setting up the WireGuard server and clients, port forwarding need to be set up on the home router so that a client device away from home can connect to the WireGuard server behind the home router. The default port for WireGuard is *51820/UDP*. Here we need internet traffic to 101.92.31.37/51820 be directed to 192.168.0.254/51820. Below is an example of setting the port forwarding on a home router
+Before we start setting up the WireGuard server and clients, port forwarding need to be set up on the home router so that a client device away from home can connect to the WireGuard server behind the home router. The default port for WireGuard is **51820/UDP**. Here we need internet traffic to 101.92.31.37/51820 be directed to 192.168.0.254/51820. Below is an example of setting the port forwarding on a home router
 ![Image](../data/Port-Forward.png)
 To make sure incoming connections reach the server, we also need to open the port in the firewall of the server. On Ubuntu 20, simply use the following command
 ```bash
