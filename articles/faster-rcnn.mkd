@@ -1,6 +1,6 @@
 # Faster RCNN
 
-![Image](../data/faster-rcnn-architecture.jpeg)
+![Image](../data/faster-rcnn/faster-rcnn-architecture.jpeg)
 
 ## Region Proposal Network (RPN)
 * Which window on the image should a CNN classifier look at?
@@ -12,7 +12,7 @@
 
 sliding windows | anchor boxes
 ---|---
-![Image](../data/sliding-window.png)|![Image](../data/anchor.jpeg)
+![Image](../data/faster-rcnn/sliding-window.png)|![Image](../data/faster-rcnn/anchor.jpeg)
 
 ### non-maximum suppresion
 There are many similar boxes and we don't want to report all of them.
@@ -21,10 +21,10 @@ There are many similar boxes and we don't want to report all of them.
 
 ## ROI pooling
 ROI's are of different shape and size. CNN prefers images of fixed size. **ROI pooling** extracts equal-length feature vectors from all ROI proposals.\
-![Image](../data/ROI-pool.gif)
+![Image](../data/faster-rcnn/ROI-pool.gif)
 
 ## Example
-![Image](../data/example.png)
+![Image](../data/faster-rcnn/example.png)
 
 ## Compared to YOLO
-![Image](../data/YOLO.png)
+![Image](../data/faster-rcnn/YOLO.png)
