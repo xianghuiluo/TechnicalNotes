@@ -88,7 +88,7 @@ We assigned the IP *192.168.1.2* to the client in the VPN. Add the client privat
 ```bash
 echo "PrivateKey = $(cat ~/.wireguard/client1/private.key)" >> ~/.wireguard/client1/home-vpn.conf
 ```
-Now add the server connect details:
+Now add the server connection details:
 ```bash
 echo "[Peer]" >> ~/.wireguard/client1/home-vpn.conf
 echo "Endpoint = 101.92.31.37:51820" >> ~/.wireguard/client1/home-vpn.conf
