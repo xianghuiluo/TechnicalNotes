@@ -58,9 +58,19 @@ Address = 192.168.1.1/24
 ListenPort = 51820
 PrivateKey = YIHEAqPWDJh2DsCrsDltwtRsBuxm7lEjwF8UOEcvxkM=
 ```
+Use **Ctrl+D** to log out of the root account.
 
 ## WireGuard Client
 ### Key Generation
+If the client device is also running Ubuntu 20 or a similar Linux distribution, follow the same steps for generating the keys of the server above. Otherwise, we create the keys and the configuration file for the client device on the server.\
+First we create a folder for keeping the keys and the configuration file.
+```bash
+cd ~
+umask 077
+mkdir .wireguard && cd .wireguard
+mkdir client1 && cd client1
+```
+
 ### Client Configuration File
 
 [Back to Contents](../README.md)
