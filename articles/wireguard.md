@@ -232,6 +232,7 @@ PersistentKeepalive = 25
 This setting makes the client periodically send keepalive packets every 25 seconds.
 
 ## References
+[WireGuard Quick Start](https://www.wireguard.com/quickstart/)\
 [Complete Wireguard Setup in 20 min – Better Linux VPN Server](https://www.smarthomebeginner.com/linux-wireguard-vpn-server-setup/)\
 [How to Set Up WireGuard VPN on Ubuntu 20.04](https://linuxize.com/post/how-to-set-up-wireguard-vpn-on-ubuntu-20-04/)\
 [How To Set Up WireGuard on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04)
