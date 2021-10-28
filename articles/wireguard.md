@@ -9,13 +9,18 @@ Here we suppose the home network consists of a home router and several devices c
 - The LAN IP range is **192.168.0.0/24**
 - The WireGuard server is assigned a static LAN IP of **192.168.0.254** by the home router
 
-## Port Forwarding and Firewall
+## Port Forwarding, Firewall, and IP forwarding
 Before we start setting up the WireGuard server and clients, port forwarding need to be set up on the home router so that a client device away from home can connect to the WireGuard server behind the home router. The default port for WireGuard is **51820/UDP**. Here we need internet traffic to 101.92.31.37/51820 be directed to 192.168.0.254/51820. Below is an example of setting the port forwarding on a home router
 ![Image](../data/Port-Forward.png)
 To make sure incoming connections reach the server, we also need to open the port in the firewall of the server. On Ubuntu 20, simply use the following command
 ```bash
 sudo ufw allow 51820/udp
 ```
+Most of the time, we will have multiple clients connected to the WireGuard server. If we want to connect from one client to another, it requires the server to relay the traffic. IP forwarding needs to be enabled on the server for this to work. Open the file **/etc/sysctl.conf** on the server and uncomment the line for **net.ipv4.ip_forward=1**. To apply the setting, we must use the following:
+```bash
+sudo sysctl -p
+```
+This will make our above setting permanent.
 
 ## WireGuard Installation
 The WireGuard tools need to be installed on both the server and the client devices. For Ubuntu 20, it can be installed simply by the following commands
@@ -156,9 +161,36 @@ sudo wg show
 ```
 
 ## Connecting to the Server
+Now that we have created the client configuration file, we can copy the file onto a client device and use it to establish a connection to the server. If the client device is a mobile phone, install the WireGuard app and load the client configuration file into it. Then it will be very straightforward to enable the VPN connection.\
+If the client device is a computer running Ubuntu 20 or a similar Linux distribution, copy the client configuration file to the **/etc/wireguard/** directory of the device and use the same **wg-quick** commands to establish and close the connection.
 
 ## Accessing the Home Network
+We have restricted the client to be only able to access the peers in the VPN (192.168.1.0/24) through the VPN connection. We can allow the VPN clients to access the devices in the home network but not connected to the VPN by changing the **AllowedIPs** to include *192.168.0.0/24*. After the change, the client configuration files looks like:
+```
+[Interface]
+Address = 192.168.1.2/32
+PrivateKey = cD+NoV94mw7SnjOU1VTHdH6GACie8mr/VDPXXY3oI1E=
+
+[Peer]
+Endpoint = 101.92.31.37:51820
+AllowedIPs = 192.168.0.0/23
+PublicKey = U2oRFamuEDrOB8eds1ETQWE3nUh7VYoGvDZV0HU8lm0=
+PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
+```
+Now a client can access the IP's in the range 192.168.0.1-192.168.1.254 through the VPN connection.\
+There is one more piece to make this work. The devices in the home network and not on the VPN need to know where to send to the IP's in the range *192.168.1.0/24*. We will add a static route in the home router. Below show an example of the router setting:
+![Image](../data/static-route.png)
 
 ## Accessing the Internet
+We can further allow the clients to direct all their internet traffic through the VPN connection. In the client configuration file, simply change the **AllowedIPs** to **0.0.0.0/0**. In the server configuration file, add the following two line in the *[Interface]* section:
+```
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -m iprange ! --dst-range 192.168.0.1-192.168.1.254 -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -m iprange ! --dst-range 192.168.0.1-192.168.1.254 -o eth0 -j MASQUERADE
+```
+We are passing the traffic through the device "eth0". This is the network device the server uses to connect to the internet. To see which device the server uses to connect to the internet, use
+```bash
+ip -o -4 route list default | cut -d" " -f5
+```
+The option "-m iprange ! --dst-range 192.168.0.1-192.168.1.254" tells the server not to NAT the traffic directed to the home LAN or the WireGuard VPN.
 
 [Back to Contents](../README.md)
