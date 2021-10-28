@@ -9,7 +9,7 @@ Here we suppose the home LAN consists of a home router and several devices conne
 - The LAN IP range is **192.168.0.0/24**
 - The WireGuard server is assigned a static LAN IP of **192.168.0.254** by the home router
 
-## Port Forwarding, Firewall, and IP forwarding
+## Port Forwarding, Firewall, and IP Forwarding
 Before we start setting up the WireGuard server and clients, port forwarding need to be set up on the home router so that a client device away from home can connect to the WireGuard server behind the home router. The default port for WireGuard is **51820/UDP**. Here we need internet traffic to 101.92.31.37/51820 be directed to 192.168.0.254/51820. Below is an example of setting the port forwarding on a home router
 ![Image](../data/Port-Forward.png)
 To make sure incoming connections reach the server, we also need to open the port in the firewall of the server. On Ubuntu 20, simply use the following command
@@ -113,8 +113,7 @@ AllowedIPs = 192.168.1.0/24
 PublicKey = U2oRFamuEDrOB8eds1ETQWE3nUh7VYoGvDZV0HU8lm0=
 PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
 ```
-The *[Interface]* section specifies the IP of the client in the VPN and contains the private key of the client.\
-The client has one peer, which is the server, and the *[Peer]* section contains the connection details of the server. **Endpoint** is the public IP address and port number with which our client device can reach the server. **AllowedIPs** specifies the IP's the client can access through the server. *PublicKey* in the *[Peer]* section is the public key of the peer (the server here). Finally we have the **PresharedKey** for the connection between the client and the server.
+The *[Interface]* section specifies the IP of the client in the VPN and contains the private key of the client. The client has one peer, which is the server, and the *[Peer]* section contains the connection details of the server. **Endpoint** is the public IP address and port number with which our client device can reach the server. **AllowedIPs** specifies the IP's the client can access through the server. It behaves as a sort of routing table when sending and a sort of access control list when receiving. *PublicKey* in the *[Peer]* section is the public key of the peer (the server here). Finally we have the **PresharedKey** for the connection between the client and the server.
 
 ### Client in Server Configuration File
 For the client to connect, the server needs to know that the client is allowed to connect. We need to add the client as a *[Peer]* in the server configuration file:
@@ -190,7 +189,7 @@ We are passing the traffic through the device "eth0". This is the network device
 ```bash
 ip -o -4 route list default | cut -d" " -f5
 ```
-The option "-m iprange ! --dst-range 192.168.0.0-192.168.1.255" tells the server not to NAT the traffic directed to the home LAN or the WireGuard VPN.\
+The option *"-m iprange ! --dst-range 192.168.0.0-192.168.1.255"* tells the server not to NAT the traffic directed to the home LAN or the WireGuard VPN.\
 At this stage, the server configuration file and the client configuration file look like (with different keys):
 ```
 [Interface]
@@ -216,5 +215,25 @@ AllowedIPs = 0.0.0.0/0
 PublicKey = U2oRFamuEDrOB8eds1ETQWE3nUh7VYoGvDZV0HU8lm0=
 PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
 ```
+
+## Extra Settings
+### Custom DNS
+Add
+```
+DNS = x.x.x.x
+```
+to the *[Interface]* section of the client configuration file to use a custom DNS.
+
+### PersistentKeepalive
+When a client is behind NAT or a firewall, the connection to the WireGuard server may no long be valid after the client has gone silent for a while. If the client wishes to receive incoming packets even when it is not sending any packets, the NAT/firewall mapping must be kept valid. The following line needs be added to the *[Peer]* section in the client configuration file:
+```
+PersistentKeepalive = 25
+```
+This setting makes the client periodically send keepalive packets every 25 seconds.
+
+## References
+[Complete Wireguard Setup in 20 min – Better Linux VPN Server](https://www.smarthomebeginner.com/linux-wireguard-vpn-server-setup/)\
+[How to Set Up WireGuard VPN on Ubuntu 20.04](https://linuxize.com/post/how-to-set-up-wireguard-vpn-on-ubuntu-20-04/)\
+[How To Set Up WireGuard on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04)
 
 [Back to Contents](../README.md)
