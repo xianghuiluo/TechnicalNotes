@@ -218,11 +218,10 @@ PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
 
 ## Extra Settings
 ### Custom DNS
-Add
+Add the following line to the *[Interface]* section of the client configuration file to use a custom DNS.
 ```
 DNS = x.x.x.x
 ```
-to the *[Interface]* section of the client configuration file to use a custom DNS.
 
 ### PersistentKeepalive
 When a client is behind NAT or a firewall, the connection to the WireGuard server may no long be valid after the client has gone silent for a while. If the client wishes to receive incoming packets even when it is not sending any packets, the NAT/firewall mapping must be kept valid. The following line needs be added to the *[Peer]* section in the client configuration file:
