@@ -8,7 +8,7 @@ sudo snap install nextcloud
 
 ## Administrative Account Configuration
 ```bash
-sudo nextcloud.manual-install \<username\> \<password\>
+sudo nextcloud.manual-install <username> <password>
 ```
 
 
