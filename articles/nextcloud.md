@@ -32,4 +32,4 @@ sudo snap stop/start nextcloud
 ## References
 [How To Install and Configure Nextcloud on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-nextcloud-on-ubuntu-20-04)
 
-[Back to Contents](../README.md)
+## [Back to Contents](../README.md)
