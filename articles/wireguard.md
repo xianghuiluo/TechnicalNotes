@@ -146,7 +146,7 @@ To bring up the server, simply use the command:
 sudo wg-quick up home-vpn
 ```
 This creates a digital network interface *home-vpn*.\
-To stop the serve, use
+To stop the server, use
 ```bash
 sudo wg-quick down home-vpn
 ```
