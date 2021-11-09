@@ -141,7 +141,7 @@ PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
 This finishes creating the configuration of a WireGuard client. Additional clients can be add by following the same steps and appending to the server configuration file.
 
 ## Running the Server
-To bring up the serve, simply use the command:
+To bring up the server, simply use the command:
 ```bash
 sudo wg-quick up home-vpn
 ```
