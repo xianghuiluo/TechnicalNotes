@@ -1,7 +1,8 @@
 # Developer-Notes
 
-* [ROS](./articles/ros-notes.md)
+* [VIM](./articles/vim.md)
 * [Git](./articles/git-notes.md)
+* [ROS](./articles/ros-notes.md)
 * [Misc](./articles/other.md)
 * [Version Number with CMake](./articles/Version-Numbers.md)
 * [Unit Tests with Google Test](./articles/GTest.md)
