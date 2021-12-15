@@ -187,8 +187,6 @@ At this stage, the server configuration file and the client configuration file l
 Address = 192.168.1.1/24
 ListenPort = 51820
 PrivateKey = YIHEAqPWDJh2DsCrsDltwtRsBuxm7lEjwF8UOEcvxkM=
-PostUp = iptables -t nat -A POSTROUTING -m iprange ! --dst-range 192.168.0.0-192.168.1.255 -o eth0 -j MASQUERADE
-PostDown = iptables -t nat -D POSTROUTING -m iprange ! --dst-range 192.168.0.0-192.168.1.255 -o eth0 -j MASQUERADE
 
 [Peer]
 AllowedIPs = 192.168.1.2/32
@@ -208,7 +206,7 @@ PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
 ```
 
 ### NAT Traffic to Internet
-In the server configuration file, add the following two line in the *[Interface]* section:
+Depending on the home router, it may not NAT the traffic from WireGuard VPN IP's to the internet. If this is the case, the WireGuard VPN server has to do the NAT. In the server configuration file, add the following two line in the *[Interface]* section:
 ```
 PostUp = iptables -t nat -A POSTROUTING -m iprange ! --dst-range 192.168.0.0-192.168.1.255 -o eth0 -j MASQUERADE
 PostDown = iptables -t nat -D POSTROUTING -m iprange ! --dst-range 192.168.0.0-192.168.1.255 -o eth0 -j MASQUERADE
