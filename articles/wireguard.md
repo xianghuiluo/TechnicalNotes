@@ -180,16 +180,7 @@ Now a client can access the IP's in the range 192.168.0.0-192.168.1.255 through 
 ![Image](../data/static-route.png)
 
 ## Accessing the Internet
-We can further allow the clients to direct all their internet traffic through the VPN connection. In the client configuration file, simply change the **AllowedIPs** to **0.0.0.0/0**. In the server configuration file, add the following two line in the *[Interface]* section:
-```
-PostUp = iptables -t nat -A POSTROUTING -m iprange ! --dst-range 192.168.0.0-192.168.1.255 -o eth0 -j MASQUERADE
-PostDown = iptables -t nat -D POSTROUTING -m iprange ! --dst-range 192.168.0.0-192.168.1.255 -o eth0 -j MASQUERADE
-```
-We are passing the traffic through the device "eth0". This is the network device the server uses to connect to the internet. To see which device the server uses to connect to the internet, use
-```bash
-ip -o -4 route list default | cut -d" " -f5
-```
-The option *"-m iprange ! --dst-range 192.168.0.0-192.168.1.255"* tells the server not to NAT the traffic directed to the home LAN or the WireGuard VPN.\
+We can further allow the clients to direct all their internet traffic through the VPN connection. In the client configuration file, simply change the **AllowedIPs** to **0.0.0.0/0**.\
 At this stage, the server configuration file and the client configuration file look like (with different keys):
 ```
 [Interface]
@@ -215,6 +206,18 @@ AllowedIPs = 0.0.0.0/0
 PublicKey = U2oRFamuEDrOB8eds1ETQWE3nUh7VYoGvDZV0HU8lm0=
 PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
 ```
+
+### NAT Traffic to Internet
+In the server configuration file, add the following two line in the *[Interface]* section:
+```
+PostUp = iptables -t nat -A POSTROUTING -m iprange ! --dst-range 192.168.0.0-192.168.1.255 -o eth0 -j MASQUERADE
+PostDown = iptables -t nat -D POSTROUTING -m iprange ! --dst-range 192.168.0.0-192.168.1.255 -o eth0 -j MASQUERADE
+```
+We are passing the traffic through the device "eth0". This is the network device the server uses to connect to the internet. To see which device the server uses to connect to the internet, use
+```bash
+ip -o -4 route list default | cut -d" " -f5
+```
+The option *"-m iprange ! --dst-range 192.168.0.0-192.168.1.255"* tells the server not to NAT the traffic directed to the home LAN or the WireGuard VPN.\
 
 ## Extra Settings
 ### Custom DNS
