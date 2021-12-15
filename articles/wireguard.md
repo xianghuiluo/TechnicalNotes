@@ -181,7 +181,8 @@ Now a client can access the IP's in the range 192.168.0.0-192.168.1.255 through 
 
 ## Accessing the Internet
 We can further allow the clients to direct all their internet traffic through the VPN connection. In the client configuration file, simply change the **AllowedIPs** to **0.0.0.0/0**.\
-At this stage, the server configuration file and the client configuration file look like (with different keys):
+At this stage, the server configuration file and the client configuration file look like (with different keys):\
+Server
 ```
 [Interface]
 Address = 192.168.1.1/24
@@ -193,6 +194,7 @@ AllowedIPs = 192.168.1.2/32
 PublicKey = la8he+5YpXJRhJKYDLmrt8/vE4q0t06P5EfqUmgr31s=
 PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
 ```
+Client
 ```
 [Interface]
 Address = 192.168.1.2/32
@@ -206,7 +208,7 @@ PresharedKey = GZ159PGs59WQOj5Z+SQszPz995TcERHmK3DknuQoqU=
 ```
 
 ### NAT Traffic to Internet
-Depending on the home router, it may not NAT the traffic from WireGuard VPN IP's to the internet. If this is the case, the WireGuard VPN server has to do the NAT. In the server configuration file, add the following two line in the *[Interface]* section:
+Depending on the home router, it may not NAT the traffic from WireGuard VPN IP's to the internet. If this is the case, the WireGuard VPN server has to do the NAT. In the server configuration file, add the following two lines in the *[Interface]* section:
 ```
 PostUp = iptables -t nat -A POSTROUTING -m iprange ! --dst-range 192.168.0.0-192.168.1.255 -o eth0 -j MASQUERADE
 PostDown = iptables -t nat -D POSTROUTING -m iprange ! --dst-range 192.168.0.0-192.168.1.255 -o eth0 -j MASQUERADE
@@ -215,7 +217,7 @@ We are passing the traffic through the device "eth0". This is the network device
 ```bash
 ip -o -4 route list default | cut -d" " -f5
 ```
-The option *"-m iprange ! --dst-range 192.168.0.0-192.168.1.255"* tells the server not to NAT the traffic directed to the home LAN or the WireGuard VPN.\
+The option *"-m iprange ! --dst-range 192.168.0.0-192.168.1.255"* tells the server not to NAT the traffic directed to the home LAN or the WireGuard VPN.
 
 ## Extra Settings
 ### Custom DNS
