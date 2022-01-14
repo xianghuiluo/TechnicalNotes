@@ -17,11 +17,13 @@ Most of the time, we will have multiple clients connected to the WireGuard serve
 sudo sysctl -p
 ```
 This will make our above setting permanent.
+
 To make sure incoming connections reach the server, we also need to open the port in the firewall of the server. On Ubuntu 20, simply use the following command
 ```bash
 sudo ufw allow 51820/udp
 ```
-The firewall also needs to allow IP forwarding. /etc/default/ufw and set DEFAULT_FORWARD_POLICY to ACCEPT.
+The firewall also needs to allow IP forwarding, edit /etc/default/ufw to set DEFAULT_FORWARD_POLICY to ACCEPT.
+
 
 ## WireGuard Installation
 The WireGuard tools need to be installed on both the server and the client devices. For Ubuntu 20, it can be installed simply by the following commands
