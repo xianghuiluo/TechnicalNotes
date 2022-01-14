@@ -12,15 +12,16 @@ Here we suppose the home LAN consists of a home router and several devices conne
 ## Port Forwarding, Firewall, and IP Forwarding
 Before we start setting up the WireGuard server and clients, port forwarding need to be set up on the home router so that a client device away from home can connect to the WireGuard server behind the home router. The default port for WireGuard is **51820/UDP**. Here we need internet traffic to 101.92.31.37/51820 be directed to 192.168.0.254/51820. Below is an example of setting the port forwarding on a home router
 ![Image](../data/Port-Forward.png)
-To make sure incoming connections reach the server, we also need to open the port in the firewall of the server. On Ubuntu 20, simply use the following command
-```bash
-sudo ufw allow 51820/udp
-```
 Most of the time, we will have multiple clients connected to the WireGuard server. If we want to connect from one client to another, it requires the server to relay the traffic. IP forwarding needs to be enabled on the server for this to work. Open the file **/etc/sysctl.conf** on the server and uncomment the line for **net.ipv4.ip_forward=1**. To apply the setting, we must use the following:
 ```bash
 sudo sysctl -p
 ```
 This will make our above setting permanent.
+To make sure incoming connections reach the server, we also need to open the port in the firewall of the server. On Ubuntu 20, simply use the following command
+```bash
+sudo ufw allow 51820/udp
+```
+The firewall also needs to allow IP forwarding. /etc/default/ufw and set DEFAULT_FORWARD_POLICY to ACCEPT.
 
 ## WireGuard Installation
 The WireGuard tools need to be installed on both the server and the client devices. For Ubuntu 20, it can be installed simply by the following commands
