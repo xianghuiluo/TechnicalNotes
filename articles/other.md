@@ -91,7 +91,7 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 
 * Mbps test
 > iperf -s\
-> iperf -c "IP" -t 60
+> iperf -c <IP> -t 60
 
 * Configure IP
 > sudo ifconfig enp0s 192.168.1.100
@@ -117,5 +117,8 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 * grep
 > grep pattern file\
 > grep -lr pattern dir
+
+* md5
+> md5sum <file>
 
 [Back to Contents](../README.md)
