@@ -112,13 +112,13 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 > unzip zipname -d dir
 
 * tcpdump
-> tcpdump src "IP" -w file.pcap
+> tcpdump src \<IP> -w file.pcap
   
 * grep
 > grep pattern file\
 > grep -lr pattern dir
 
 * md5
-> md5sum <file>
+> md5sum \<file>
 
 [Back to Contents](../README.md)
