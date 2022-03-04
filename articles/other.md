@@ -123,19 +123,21 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 
 * Rotation
 ```C++
-    double RotationAngle = M_PI/2;
-    Eigen::Vector3d RotationAxis(0, 1, 0);
-    Eigen::AngleAxisd Rotation(RotationAngle, RotationAxis);
-    Eigen::Quaterniond RotationQuaternion{Rotation};
-    Eigen::Matrix3d RotationMatrix = RotationQuaternion.normalized().toRotationMatrix();
+#include <Eigen/Geometry>
 
-    std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
+double RotationAngle = M_PI/2;
+Eigen::Vector3d RotationAxis(0, 1, 0);
+Eigen::AngleAxisd Rotation(RotationAngle, RotationAxis);
+Eigen::Quaterniond RotationQuaternion{Rotation};
+Eigen::Matrix3d RotationMatrix = RotationQuaternion.normalized().toRotationMatrix();
 
-    Eigen::Quaterniond RotationQuaternion2{Eigen::AngleAxisd(M_PI/2, Eigen::Vector3d{1,0,0})};
-    RotationQuaternion = RotationQuaternion * RotationQuaternion2;
-    RotationMatrix = RotationQuaternion.normalized().toRotationMatrix();
+std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
 
-    std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
+Eigen::Quaterniond RotationQuaternion2{Eigen::AngleAxisd(M_PI/2, Eigen::Vector3d{1,0,0})};
+RotationQuaternion = RotationQuaternion * RotationQuaternion2;
+RotationMatrix = RotationQuaternion.normalized().toRotationMatrix();
+
+std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
 ```
 
 [Back to Contents](../README.md)
