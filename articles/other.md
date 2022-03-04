@@ -138,6 +138,13 @@ RotationQuaternion = RotationQuaternion * RotationQuaternion2;
 RotationMatrix = RotationQuaternion.normalized().toRotationMatrix();
 
 std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
+
+Eigen::Vector3d A(0,0,1);
+Eigen::Vector3d B(-1,0,0);
+RotationQuaternion.setFromTwoVectors(B, A);
+RotationMatrix = RotationQuaternion.normalized().toRotationMatrix();
+
+std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
 ```
 
 [Back to Contents](../README.md)
