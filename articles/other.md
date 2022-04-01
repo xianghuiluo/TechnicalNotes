@@ -91,13 +91,13 @@ double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::
 
 * C timing
 ```C
-#include <time>
+#include <time.h>
 clock_t begin = clock();
 ...
 ...
 ...
 clock_t end = clock();
-double duration = (end - begin)/CLOCKS_PER_SEC;
+double duration = (double)((end - begin)/CLOCKS_PER_SEC);
 ```
 
 
