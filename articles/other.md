@@ -89,6 +89,18 @@ int random_number = UniformIntDistribution(RandomEngine);
 double now = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count()/1000.0;
 ```
 
+* C timing
+```C
+#include <time>
+clock_t begin = clock();
+...
+...
+...
+clock_t end = clock();
+double duration = (end - begin)/CLOCKS_PER_SEC;
+```
+
+
 * Mbps test
 > iperf -s\
 > iperf -c <IP> -t 60
