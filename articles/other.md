@@ -158,5 +158,9 @@ RotationMatrix = RotationQuaternion.normalized().toRotationMatrix();
 
 std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
 ```
+  
+* File transfer with netcat
+> Receiving side: netcat -l 4444 > myfile.txt
+> Sending side: netcat <receiver IP> 4444 < thefile.txt
 
 [Back to Contents](../README.md)
