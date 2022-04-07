@@ -161,6 +161,6 @@ std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
   
 * File transfer with netcat
 > Receiver side: netcat -l 4444 > myfile.txt\
-> Sender side: netcat <receiver IP> 4444 < thefile.txt
+> Sender side: netcat \<receiver IP> 4444 < thefile.txt
 
 [Back to Contents](../README.md)
