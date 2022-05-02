@@ -40,4 +40,7 @@
 * View commit
 > gitk \<commit>
 
+* Log
+> git log --pretty=format:"%h %ad %s"
+
 [Back to Contents](../README.md)
