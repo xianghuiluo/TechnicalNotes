@@ -7,7 +7,8 @@
 * Branch
 > git branch -r\
 > git fetch origin Production\
-> git checkout Production
+> git checkout Production\
+> git branch \<branch-name> \<commit-number>
 
 * Tags
 > git tag # show all tags\
