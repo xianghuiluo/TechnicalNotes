@@ -37,6 +37,6 @@
 > git commit
 
 * View commit
-> gitk <commit>
+> gitk \<commit>
 
 [Back to Contents](../README.md)
