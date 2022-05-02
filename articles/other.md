@@ -164,12 +164,12 @@ std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
 > Sender side: netcat \<receiver IP> 4444 < thefile.txt
 
 * ip
-> ip addr
-> ip link
-> ip link set dev eth0 down
-> ip link set dev eth0 up
-> ip dhclient eh0
-> ip addr add 192.168.1.121/24 dev eth0
+> ip addr\
+> ip link\
+> ip link set dev eth0 down\
+> ip link set dev eth0 up\
+> ip dhclient eh0\
+> ip addr add 192.168.1.121/24 dev eth0\
 > ip route add default via 192.168.1.1
 
 [Back to Contents](../README.md)
