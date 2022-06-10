@@ -8,6 +8,9 @@ In a nutshell, a VAE is an **autoencoder** whose encodings distribution is **reg
 **autoencoder** -- encoder and decoder are neural nets with a bottleneck in between.
 ![Image](../data/VAE/autoencoder.png)
 
+## Data Generation
+**lack of regularity** -- the lack of interpretable and exploitable structures in the latent space.
+
 
 
 
