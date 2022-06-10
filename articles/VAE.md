@@ -9,6 +9,7 @@ In a nutshell, a VAE is an **autoencoder** whose encodings distribution is **reg
 ![Image](../data/VAE/autoencoder.png)
 
 ## Data Generation
+![Image](../data/VAE/latent-space-irregular.png)
 **lack of regularity** -- the lack of interpretable and exploitable structures in the latent space.
 
 
