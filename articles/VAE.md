@@ -4,7 +4,9 @@ In a nutshell, a VAE is an **autoencoder** whose encodings distribution is **reg
 
 ## Dimensionality Reduction
 ![Image](../data/VAE/encodeco.png)
-**principal components analysis** (PCA) -- encoder and decoder are linear transforms.
+**principal component analysis** (PCA) -- encoder and decoder are linear transforms.
+**autoencoder** -- encoder and decoder are neural nets with a bottleneck in between.
+![Image](../data/VAE/autoencoder.png)
 
 
 
