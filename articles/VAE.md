@@ -21,6 +21,8 @@ In a nutshell, a VAE is an **autoencoder** whose encodings distribution is **reg
 **completeness** -- for a chosen distribution, a point sampled from the latent space should give “meaningful” content once decoded.
 ![Image](../data/VAE/VAE-regularity.png)
 
+![Image](../data/VAE/VAE-regularisation.png)
+
 
 ### References
 [Understanding Variational Autoencoders (VAEs)](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73)
