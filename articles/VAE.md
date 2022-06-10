@@ -19,6 +19,7 @@ In a nutshell, a VAE is an **autoencoder** whose encodings distribution is **reg
 ## Regularisation
 **continuity** -- two close points in the latent space should not give two completely different contents once decoded.\
 **completeness** -- for a chosen distribution, a point sampled from the latent space should give “meaningful” content once decoded.
+![Image](../data/VAE/VAE-regularity.png)
 
 
 ### References
