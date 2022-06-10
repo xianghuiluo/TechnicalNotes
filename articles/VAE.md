@@ -14,6 +14,7 @@ In a nutshell, a VAE is an **autoencoder** whose encodings distribution is **reg
 
 ## Variational Autoencoder
 ![Image](../data/VAE/encoded-distribution.png)
+![Image](../data/VAE/VAE-loss.png)
 
 
 
