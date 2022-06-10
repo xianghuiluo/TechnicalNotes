@@ -27,3 +27,7 @@ ROI's are of different shape and size. CNN prefers images of fixed size. **ROI p
 
 ## Example
 ![Image](../data/faster-rcnn/example.png)
+
+
+### References
+[Understanding Variational Autoencoders (VAEs)]([https://www.wireguard.com/quickstart/](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73))
