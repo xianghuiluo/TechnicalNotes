@@ -1,4 +1,4 @@
-# Developer-Notes
+# Technical Notes
 
 * [VIM](./articles/vim.md)
 * [Git](./articles/git-notes.md)
