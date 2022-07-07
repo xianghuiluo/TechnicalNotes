@@ -1,15 +1,13 @@
-# Variational Autoencoder (VAE)
+# ROS2
 
 In a nutshell, a VAE is an **autoencoder** whose encodings distribution is **regularised** during the training in order to ensure that its latent space has **good properties** allowing us to generate new meaningful data.
 
-## Dimensionality Reduction
-![Image](../data/VAE/encodeco.png)
+## ROS1
 **principal component analysis** (PCA) -- linear encoder with orthogonal rows and linear decoder.\
 **autoencoder** -- encoder and decoder are neural nets with a bottleneck in between.
-![Image](../data/VAE/autoencoder.png)
 
 ## Data Generation
-![Image](../data/VAE/latent-space-irregular.png)
+![Image](../data/ROS2/ROS1vsROS2.png)
 **lack of regularity** -- the lack of interpretable and exploitable structures in the latent space.
 
 ## Variational Autoencoder
