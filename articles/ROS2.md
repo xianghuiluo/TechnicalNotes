@@ -1,6 +1,6 @@
 # ROS2
 
-In a nutshell, a VAE is an **autoencoder** whose encodings distribution is **regularised** during the training in order to ensure that its latent space has **good properties** allowing us to generate new meaningful data.
+ROS2 is ground-up redesign of ROS1 that has huge performance and feature upgrade.
 
 ## ROS1
 **principal component analysis** (PCA) -- linear encoder with orthogonal rows and linear decoder.\
