@@ -13,7 +13,7 @@ No standard support. Centralized discovery and registration.
 * Realtime\
 No support.
 * Multi-platform\
-Only Linux.
+Linux only.
 * Microcontroller\
 No support.
 
