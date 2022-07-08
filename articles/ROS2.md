@@ -23,6 +23,13 @@ No support.
 ## Features of ROS2
 ![Image](../data/ROS2/RCL-API.png)
 
+ROS2 is based on Data Distribution Service (DDS), an an open standard for communications that is used in critical infrastructure such as military, spacecraft, and financial systems. As a result, ROS2 has the following capabilities
+* Best-in-class security
+* Embedded and realtime support
+* Multi-robot communication
+* Operation in nonideal network environment\
+DDS uses UDP, supports distributed discovery, and has built-in security standards.
+
 
 ### References
 [Robot Operating System 2: Design, architecture, and uses in the wild](https://www.science.org/doi/epdf/10.1126/scirobotics.abm6074)
