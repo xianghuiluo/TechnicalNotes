@@ -31,7 +31,7 @@ DDS uses UDP, supports distributed discovery, and has built-in security standard
 
 ### Performance and Reliability
 DDS uses UDP to deliver data, which does not attempt to retransmit data. Instead, DDS decides when and how to retransmit in unreliable conditions.\
-QoS
+QoS Settings:
 * reliability
   * best-effort
   * reliable
