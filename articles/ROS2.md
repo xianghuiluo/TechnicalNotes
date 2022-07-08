@@ -6,12 +6,12 @@ ROS2 is a ground-up redesign of ROS1 that has significant performance and featur
 Originated from 2007 as a research platform. Its features and algorithms are not production grade.
 * Performance and Reliability\
 TCPROS (bespoke TCP/IP).
+* Realtime\
+No support.
 * Multi-robot\
 No standard support. Centralized discovery and registration.
 * Security\
 No built-in security mechanism.
-* Realtime\
-No support.
 * Multi-platform\
 Linux only.
 * Microcontroller\
