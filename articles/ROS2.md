@@ -20,6 +20,9 @@ No support.
 ## Comparison between ROS1 and ROS2
 ![Image](../data/ROS2/ROS1vsROS2.png)
 
+## Features of ROS2
+![Image](../data/ROS2/ROS2-API.png)
+
 
 ### References
 [Robot Operating System 2: Design, architecture, and uses in the wild](https://www.science.org/doi/epdf/10.1126/scirobotics.abm6074)
