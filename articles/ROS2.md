@@ -1,6 +1,6 @@
 # ROS2
 
-ROS2 is a ground-up redesign of ROS1 that has huge performance and feature upgrade.
+ROS2 is a ground-up redesign of ROS1 that has significant performance and feature upgrade.
 
 ## Limitations of ROS1
 Originated from 2007 as a research platform. Its features and algorithms are not production grade.
