@@ -29,6 +29,13 @@ ROS2 is based on Data Distribution Service (DDS), an open standard for communica
 
 DDS uses UDP, supports distributed discovery, and has built-in security standards.
 
+### Performance and Reliability
+### Security
+DDS security standard + SROS2
+* Authentication
+* Encryption
+* Access control
+
 ![Image](../data/ROS2/RCL-API.png)
 
 ### References
