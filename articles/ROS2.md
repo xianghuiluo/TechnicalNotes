@@ -3,8 +3,19 @@
 ROS2 is ground-up redesign of ROS1 that has huge performance and feature upgrade.
 
 ## ROS1
-**principal component analysis** (PCA) -- linear encoder with orthogonal rows and linear decoder.\
-**autoencoder** -- encoder and decoder are neural nets with a bottleneck in between.
+Originated from 2007 as a research platform. Its features and algorithms are not production grade.
+* Performance and Reliability
+TCPROS
+* Security
+No built-in security mechanism.
+* Multi-robot
+No standard support. Central discovery and registration.
+* Realtime
+No support.
+* Multi-platform
+Only Linux.
+* Microcontroller
+No support.
 
 ## Data Generation
 ![Image](../data/ROS2/ROS1vsROS2.png)
