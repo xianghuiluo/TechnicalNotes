@@ -17,7 +17,7 @@ Linux only.
 * Microcontroller\
 No support.
 
-## ROS2
+## Comparison between ROS1 and ROS2
 ![Image](../data/ROS2/ROS1vsROS2.png)
 
 
