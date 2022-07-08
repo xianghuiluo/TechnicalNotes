@@ -20,7 +20,7 @@ No support.
 ## Comparison between ROS1 and ROS2
 ![Image](../data/ROS2/ROS1vsROS2.png)
 
-## Features of ROS2
+## Main Features of ROS2
 ROS2 is based on Data Distribution Service (DDS), an open standard for communications that is used in critical infrastructure such as military, spacecraft, and financial systems. As a result, ROS2 has the following capabilities
 * Best-in-class security
 * Embedded and realtime support
