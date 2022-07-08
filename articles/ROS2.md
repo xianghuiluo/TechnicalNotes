@@ -30,6 +30,19 @@ ROS2 is based on Data Distribution Service (DDS), an open standard for communica
 DDS uses UDP, supports distributed discovery, and has built-in security standards.
 
 ### Performance and Reliability
+DDS uses UDP to deliver data, which does not attempt to retransmit data. Instead, DDS decides when and how to retransmit in unreliable conditions.\
+QoS
+* reliability
+** best-effort
+** reliable
+* durability
+** volatile
+** transient-local
+* deadline
+* lifespan
+* liveliness
+* lease duration
+
 ### Security
 DDS security standard + SROS2
 * Authentication
