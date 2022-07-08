@@ -39,6 +39,7 @@ QoS Settings:
 * connection history
   * keep-all
   * keep-last
+
 Other settings: deadline, lifespan, liveliness, lease duration
 
 ### Security
