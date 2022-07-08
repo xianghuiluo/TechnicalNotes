@@ -21,7 +21,7 @@ No support.
 ![Image](../data/ROS2/ROS1vsROS2.png)
 
 ## Features of ROS2
-![Image](../data/ROS2/ROS2-API.png)
+![Image](../data/ROS2/ROS-API.png)
 
 
 ### References
