@@ -36,10 +36,10 @@ QoS Settings:
 * durability
   * volatile
   * transient-local
-* deadline
-* lifespan
-* liveliness
-* lease duration
+* connection history
+  * keep-all
+  * keep-last
+Other settings: deadline, lifespan, liveliness, lease duration
 
 ### Security
 DDS security standard + SROS2
