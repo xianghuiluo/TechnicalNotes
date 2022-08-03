@@ -3,7 +3,7 @@
 * ros2 pkg
 > ros2 pkg create --build-type ament_cmake camera --dependencies rclcpp std_msgs sensor_msgs cv_bridge
 
-* colcon
+* build
 > rosdep install -i --from-path src --rosdistro rolling -y\
 > colcon build --packages-select camera
 
