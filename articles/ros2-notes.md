@@ -15,4 +15,7 @@ export ROS_MASTER_URI=http://localhost:11311
 ros2 run ros1_bridge dynamic_bridge
 ```
 
+* ros2 topic
+> ros2 topic echo /camera_image --field header.stamp
+
 [Back to Contents](../README.md)
