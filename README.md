@@ -3,6 +3,7 @@
 * [VIM](./articles/vim.md)
 * [Git](./articles/git-notes.md)
 * [ROS](./articles/ros-notes.md)
+* [ROS2](./articles/ros2-notes.md)
 * [Misc](./articles/other.md)
 * [Version Number with CMake](./articles/Version-Numbers.md)
 * [Unit Tests with Google Test](./articles/GTest.md)
