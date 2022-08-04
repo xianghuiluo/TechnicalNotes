@@ -18,4 +18,7 @@ ros2 run ros1_bridge dynamic_bridge
 * ros2 topic
 > ros2 topic echo /camera_image --field header.stamp
 
+* ros2 run
+> ros2 run camera camera --ros-args -p CameraURL:=http://admin:@192.168.0.20/video.cgi
+
 [Back to Contents](../README.md)
