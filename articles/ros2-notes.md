@@ -1,7 +1,8 @@
 # ROS2 Notes
 
 * ros2 pkg
-> ros2 pkg create --build-type ament_cmake camera --dependencies rclcpp std_msgs sensor_msgs cv_bridge
+> ros2 pkg create --build-type ament_cmake camera --dependencies rclcpp std_msgs sensor_msgs cv_bridge\
+> ros2 pkg create --build-type ament_python py_pubsub --dependencies rclpy std_msgs sensor_msgs vision_msgs
 
 * build
 > rosdep install -i --from-path src --rosdistro rolling -y\
