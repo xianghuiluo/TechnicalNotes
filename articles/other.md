@@ -171,5 +171,9 @@ std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
 > ip dhclient eh0\
 > ip addr add 192.168.1.121/24 dev eth0\
 > ip route add default via 192.168.1.1
+  
+* ufw
+> ufw status numbered\
+> ufw delete \<n>
 
 [Back to Contents](../README.md)
