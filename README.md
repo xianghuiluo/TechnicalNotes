@@ -12,3 +12,4 @@
 * [Nextcloud Hub Server Setup](./articles/nextcloud.md)
 * [Ubuntu 20 on Raspberry Pi 4B](./articles/raspi-ubuntu.md)
 * [WireGuard Setup](./articles/wireguard.md)
+* [NFS](./articles/nfs.md)
