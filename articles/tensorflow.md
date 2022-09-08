@@ -9,7 +9,7 @@ At the time of this writing, the software requirements are
 
 ## NVIDIA Driver
 The first step is to install the NVIDIA driver. On more recently Ubuntu version, this is easy. Simply open "Software & Updates", navigate to the "Additional Drivers" tab and choose the latest NVIDIA driver as shown below.
-
+![Image](../data/nvidia-driver.png)
 
 
 ## References
