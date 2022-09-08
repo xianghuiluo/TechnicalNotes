@@ -22,7 +22,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.2/lib64
 ```
 
 ## Step 3 - cuDNN
-Download cudnn-11.2-linux-x64-v8.1.0.77.tgz from [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn). Extract it and copy everything in 
+Download cudnn-11.2-linux-x64-v8.1.0.77.tgz from [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn). Extract it and copy everything in cuda/include/ to /usr/local/cuda-11.2/include/ and everything in cuda/lib64/ to /usr/local/cuda-11.2/lib64/.
 
 ## Step 4 - TensorFlow
 Install with
