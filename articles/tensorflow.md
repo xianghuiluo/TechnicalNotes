@@ -22,8 +22,13 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.2/lib64
 ```
 
 ## Step 3 - cuDNN
+Download cudnn-11.2-linux-x64-v8.1.0.77.tgz from [https://developer.nvidia.com/cudnn](https://developer.nvidia.com/cudnn). Extract it and copy everything in 
 
 ## Step 4 - TensorFlow
+Install with
+> pip install tensorflow
+and verify the installation by
+> python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
 ## References
 [Install TensorFlow with pip](https://www.tensorflow.org/install/pip)
