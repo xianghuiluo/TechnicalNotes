@@ -175,5 +175,13 @@ std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
 * ufw
 > ufw status numbered\
 > ufw delete \<n>
+  
+* Intrinsic Camera Matrix
+$$
+  \begin{align}
+  f_x, 0, c_x\\
+  0, f_y, c_y
+  \end{align}
+$$
 
 [Back to Contents](../README.md)
