@@ -8,11 +8,11 @@ At the time of this writing, the software requirements are
 > cuDNN SDK 8.1.0.
 
 ## Step 1 - NVIDIA Driver
-The first step is to install the NVIDIA driver. On more recently Ubuntu version, this is easy. Simply open "Software & Updates", navigate to the "Additional Drivers" tab and choose the latest NVIDIA driver as shown below.
+The first step is to install the NVIDIA driver. On more recent Ubuntu versions, this is easy. Simply open "Software & Updates", navigate to the "Additional Drivers" tab and choose the latest NVIDIA driver as shown below.
 ![Image](../data/nvidia-driver.png)
 
 ## Step 2 - CUDA
-Download cuda_11.2.0_460.27.04_linux.run from [https://developer.nvidia.com/cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive). Install CUDA by running the file. Since the NVIDIA driver is already installed in the above step, choose not to install driver during the installation process as shown below.
+Download cuda_11.2.0_460.27.04_linux.run from [https://developer.nvidia.com/cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive). Install CUDA by running the file. Since the NVIDIA driver is already installed in the above step, choose not to install the driver during the installation process as shown below.
 ![Image](../data/tf-cuda-1.png)
 ![Image](../data/tf-cuda-2.png)
 After CUDA is installed, add the following lines to .bashrc
@@ -26,7 +26,7 @@ Download cudnn-11.2-linux-x64-v8.1.0.77.tgz from [https://developer.nvidia.com/c
 
 ## Step 4 - TensorFlow
 Install with
-> pip install tensorflow
+> pip install tensorflow\
 and verify the installation by
 > python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
