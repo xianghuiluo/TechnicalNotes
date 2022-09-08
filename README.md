@@ -2,6 +2,7 @@
 
 * [VIM](./articles/vim.md)
 * [Git](./articles/git-notes.md)
+* [Git Server](./articles/git-server.md)
 * [ROS](./articles/ros-notes.md)
 * [ROS2](./articles/ros2-notes.md)
 * [Misc](./articles/other.md)
