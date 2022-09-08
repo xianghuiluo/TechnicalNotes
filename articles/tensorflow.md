@@ -7,10 +7,15 @@ At the time of this writing, the software requirements are
 > CUDA® Toolkit 11.2.\
 > cuDNN SDK 8.1.0.
 
-## NVIDIA Driver
+## Step 1 - NVIDIA Driver
 The first step is to install the NVIDIA driver. On more recently Ubuntu version, this is easy. Simply open "Software & Updates", navigate to the "Additional Drivers" tab and choose the latest NVIDIA driver as shown below.
 ![Image](../data/nvidia-driver.png)
 
+## Step 2 - CUDA
+
+## Step 3 - cuDNN
+
+## Step 4 - TensorFlow
 
 ## References
 [Install TensorFlow with pip](https://www.tensorflow.org/install/pip)
