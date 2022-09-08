@@ -8,7 +8,7 @@ At the time of this writing, the software requirements are
 > cuDNN SDK 8.1.0.
 
 ## NVIDIA Driver
-The first step is to install the NVIDIA driver. On more recently Ubuntu version, this is easy.
+The first step is to install the NVIDIA driver. On more recently Ubuntu version, this is easy. Simply open "Software & Updates", navigate to the "Additional Drivers" tab and choose the latest NVIDIA driver as shown below.
 
 
 
