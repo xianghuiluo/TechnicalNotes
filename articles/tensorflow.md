@@ -26,8 +26,9 @@ Download cudnn-11.2-linux-x64-v8.1.0.77.tgz from [https://developer.nvidia.com/c
 
 ## Step 4 - TensorFlow
 Install with
-> pip install tensorflow\
-and verify the installation by\
+> pip install tensorflow
+
+and verify the installation by
 > python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
 ## References
