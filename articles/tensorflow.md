@@ -12,6 +12,9 @@ The first step is to install the NVIDIA driver. On more recently Ubuntu version,
 ![Image](../data/nvidia-driver.png)
 
 ## Step 2 - CUDA
+Download cuda_11.2.0_460.27.04_linux.run from [https://developer.nvidia.com/cuda-toolkit-archive](https://developer.nvidia.com/cuda-toolkit-archive). Install CUDA by running the file. Since the NVIDIA driver is already installed in the above step, choose not to install driver during the installation process as shown below.
+![Image](../data/tf-cuda-1.png)
+![Image](../data/tf-cuda-2.png)
 
 ## Step 3 - cuDNN
 
