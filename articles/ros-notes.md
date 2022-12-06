@@ -20,7 +20,7 @@
 > rostopic pub /speed std_msgs/Int16 -r 100 -- '-600'\
 > rostopic pub /track_name std_msgs/String 1F -1\
 > rostopic pub /localisation geometry_msgs/PointStamped "{header: auto, point: {x: -43.49358494, y: 172.54433833, z: 300}}"\
-> rostopic pub /STOP ohmio_msgs/BoolStamped "{stamp: now, data: 1}" -1
+> rostopic pub /STOP ohmio_msgs/BoolStamped "{stamp: now, data: 1}" -1\
 > rostopic pub /tied_margin std_msgs/Header "{frame_id: 'both', stamp: {secs: 30, nsecs: 0}}" -1
 
 * rviz -d ./ground-seg.rviz
