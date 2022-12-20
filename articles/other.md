@@ -168,8 +168,9 @@ std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
 > ip link\
 > ip link set dev eth0 down\
 > ip link set dev eth0 up\
-> ip dhclient eh0\
 > ip addr add 192.168.1.121/24 dev eth0\
+> ip addr del 192.168.1.121/24 dev eth0\
+> ip dhclient eh0\
 > ip route add default via 192.168.1.1
   
 * ufw
