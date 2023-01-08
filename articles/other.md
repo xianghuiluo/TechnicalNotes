@@ -177,5 +177,9 @@ std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
 > ufw status numbered\
 > ufw delete \<n>
 
+* NFS
+> showmount -e 192.168.111.20\
+> sudo mount -o v3 192.168.111.20:/data/dump /media/blackbox-dump
+
 
 [Back to Contents](../README.md)
