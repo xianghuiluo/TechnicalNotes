@@ -176,10 +176,10 @@ std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
 * ufw
 > ufw status numbered\
 > ufw delete \<n>
+  
+* Create a file of certain size
+> dd if=/dev/zero of=file.txt bs=1024 count=56
 
-* NFS
-> showmount -e 192.168.111.20\
-> sudo mount -o v3 192.168.111.20:/data/dump /media/blackbox-dump
 
 
 [Back to Contents](../README.md)
