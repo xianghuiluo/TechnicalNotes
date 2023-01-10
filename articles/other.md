@@ -182,7 +182,8 @@ std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
   
 * Login through Serial Port
 > dmesg\
-> sudo putty /dev/ttyUSB0 -serial -sercfg 115200,8,n,1,N
+> sudo putty /dev/ttyUSB0 -serial -sercfg 115200,8,n,1,N\
+> screen /dev/ttyUSB0 115200
 
 
 
