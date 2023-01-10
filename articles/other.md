@@ -179,6 +179,10 @@ std::cout << "Rotation Matrix: " << std::endl << RotationMatrix << std::endl;
   
 * Create a file of certain size
 > dd if=/dev/zero of=file.txt bs=1024 count=56
+  
+* Login through Serial Port
+> dmesg\
+> sudo putty /dev/ttyUSB0 -serial -sercfg 115200,8,n,1,N
 
 
 
