@@ -45,7 +45,7 @@
 > git log --graph --oneline --decorate --all
 
 * history of file
-> gitk -- \<path-to-file>
-> git log -p -- path/to/file
+> gitk -- \<path-to-file>\
+> git log -p -- \<path/to/file>
 
 [Back to Contents](../README.md)
