@@ -44,4 +44,7 @@
 > git log --pretty=format:"%h %ad %s"\
 > git log --graph --oneline --decorate --all
 
+* history of file
+> gitk -- \<path-to-file>
+
 [Back to Contents](../README.md)
