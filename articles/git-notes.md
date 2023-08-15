@@ -9,6 +9,8 @@
 > git fetch origin Production\
 > git checkout Production\
 > git branch \<branch-name> \<commit-number>
+> delete local branch: git branch -d \<branch_name>
+> delete remote branch: git push <remote_name> --delete \<branch_name>
 
 * Tags
 > git tag # show all tags\
