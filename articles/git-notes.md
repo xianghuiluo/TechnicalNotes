@@ -39,6 +39,10 @@
 > git revert --no-commit "commit-id"..HEAD\
 > git commit
 
+* Reset head
+> git reset --hard \<commit-SHA>\
+> git push origin HEAD:\<name-of-remote-branch>
+
 * View commit
 > gitk \<commit>
 
