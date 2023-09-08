@@ -54,4 +54,8 @@
 > gitk -- \<path-to-file>\
 > git log -p -- \<path/to/file>
 
+* compare two commits
+> git diff commit1 commit2
+
+
 [Back to Contents](../README.md)
