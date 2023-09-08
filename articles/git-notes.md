@@ -58,5 +58,4 @@
 > git diff commit1 commit2\
 > git tui diff commit1 commit2
 
-
 [Back to Contents](../README.md)
