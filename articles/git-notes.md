@@ -56,6 +56,7 @@
 
 * compare two commits
 > git diff commit1 commit2\
-> git tui diff commit1 commit2
+> git tui diff commit1 commit2\
+> git difftool --tool=meld commit1 commit2
 
 [Back to Contents](../README.md)
