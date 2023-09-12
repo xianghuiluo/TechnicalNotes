@@ -58,7 +58,7 @@
 > git diff commit1 commit2\
 > git tui diff commit1 commit2\
 > git difftool --tool=meld commit1 commit2\
-> git difftool --tool=meld commit1 commit2 -- <file>
+> git difftool --tool=meld commit1 commit2 -- \<file>
 
 * reset local branch to remote branch
 > git reset --hard origin/\<branch-name>
