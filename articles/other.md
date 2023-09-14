@@ -130,7 +130,7 @@ double duration = (double)((end - begin)/CLOCKS_PER_SEC);
 > grep pattern file\
 > grep -lr pattern dir
 
-* md5
+* checksum
 > md5sum \<file>\
 > sha512sum \<file>
 
