@@ -131,7 +131,8 @@ double duration = (double)((end - begin)/CLOCKS_PER_SEC);
 > grep -lr pattern dir
 
 * md5
-> md5sum \<file>
+> md5sum \<file>\
+> sha512sum \<file>
 
 * Rotation
 ```C++
