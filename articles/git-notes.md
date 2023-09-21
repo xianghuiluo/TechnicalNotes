@@ -41,7 +41,7 @@
 
 * Reset head
 > git reset --hard \<commit-SHA>\
-> git push origin HEAD:\<name-of-remote-branch>
+> git push -f origin HEAD:\<name-of-remote-branch>
 
 * View commit
 > gitk \<commit>
