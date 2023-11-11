@@ -29,6 +29,12 @@ Now the setup is finished, Nextcloud service can be visited with server’s doma
 sudo snap stop/start nextcloud
 ```
 
+## Backup and Restore
+```bash
+sudo nextcloud.export # /var/snap/nextcloud/common/backups/
+sudo nextcloud.import <path_to_backup>
+```
+
 ## References
 [How To Install and Configure Nextcloud on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-nextcloud-on-ubuntu-20-04)\
 [Change data directory to use another disk partition](https://github.com/nextcloud-snap/nextcloud-snap/wiki/Change-data-directory-to-use-another-disk-partition)
